@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate-sitemap && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate-sitemap": "npx ts-node-esm --experimental-specifier-resolution=node --project scripts/tsconfig.json scripts/generate-sitemap.ts"
+    "generate-sitemap": "node --loader ts-node/esm scripts/generate-sitemap.ts"
   },
   "dependencies": {
     "@cloudinary/react": "^1.13.0",
