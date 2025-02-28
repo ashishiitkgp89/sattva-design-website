@@ -107,6 +107,53 @@ export interface ServiceArea {
   };
 }
 
+export interface BlogPost {
+  title: string;
+  slug: string;
+  featuredImage: {
+    fields: {
+      file: {
+        url: string;
+      };
+    };
+  };
+  excerpt?: string;
+  content?: Document;
+  publishDate?: string;
+  tags?: string[];
+  seoTitle?: string;
+  seoDescription?: string;
+  seoKeywords?: string[];
+  author?: {
+    fields: {
+      name: string;
+      avatar?: {
+        fields: {
+          file: {
+            url: string;
+          };
+        };
+      };
+    };
+  };
+}
+
+interface BlogPostEntry {
+  fields: BlogPost;
+  sys: {
+    id: string;
+    type: string;
+    contentType: {
+      sys: {
+        type: string;
+        linkType: string;
+        id: string;
+      };
+    };
+  };
+  contentTypeId: string;
+}
+
 export async function getProjects(): Promise<Project[]> {
   try {
     const response = await contentfulClient.getEntries({
@@ -338,6 +385,39 @@ export async function getServiceArea(slug: string): Promise<ServiceArea | null> 
     };
   } catch (error) {
     console.error('Error fetching service area:', error);
+    throw error;
+  }
+}
+
+export async function getBlogs(): Promise<BlogPost[]> {
+  try {
+    const response = await contentfulClient.getEntries<BlogPostEntry>({
+      content_type: 'blogPost',
+      order: '-fields.publishDate',
+    });
+
+    return response.items.map(item => item.fields);
+  } catch (error) {
+    console.error('Error fetching blogs:', error);
+    throw error;
+  }
+}
+
+export async function getBlog(slug: string): Promise<BlogPost | null> {
+  try {
+    const response = await contentfulClient.getEntries<BlogPostEntry>({
+      content_type: 'blogPost',
+      'fields.slug': slug,
+      limit: 1,
+    });
+
+    if (response.items.length === 0) {
+      return null;
+    }
+
+    return response.items[0].fields;
+  } catch (error) {
+    console.error('Error fetching blog:', error);
     throw error;
   }
 }

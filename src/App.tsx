@@ -8,6 +8,8 @@ import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
 import ServiceDetail from './pages/ServiceDetail';
+import Blogs from './pages/Blogs';
+import BlogDetail from './pages/BlogDetail';
 import NotFound from './pages/NotFound';
 import DaltonganjMedininagar from './pages/service-areas/DaltonganjMedininagar';
 import Lesliganj from './pages/service-areas/Lesliganj';
@@ -43,6 +45,8 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:slug" element={<ProjectDetail />} />
             <Route path="/services/:slug" element={<ServiceDetail />} />
+            <Route path="/blog" element={<Blogs />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/service-areas/daltonganj-medininagar" element={<DaltonganjMedininagar />} />
             <Route path="/service-areas/lesliganj" element={<Lesliganj />} />
             <Route path="/service-areas/chainpur" element={<Chainpur />} />
