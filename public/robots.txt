@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://sattvadesign.in/sitemap.xml 
+Sitemap: https://sattvadesignconsultancy.com/sitemap.xml 
