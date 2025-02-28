@@ -3,13 +3,48 @@ import path from 'path';
 import { parse } from '@babel/parser';
 import traverse from '@babel/traverse';
 import * as t from '@babel/types';
+import { createClient } from 'contentful';
 
 const DOMAIN = 'https://sattvadesignconsultancy.com';
+
+// Initialize Contentful client
+const contentfulClient = createClient({
+  space: process.env.VITE_CONTENTFUL_SPACE_ID || '',
+  accessToken: process.env.VITE_CONTENTFUL_ACCESS_TOKEN || '',
+});
 
 interface SitemapURL {
   loc: string;
   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority: number;
+}
+
+async function getContentfulEntries() {
+  try {
+    // Fetch blogs
+    const blogs = await contentfulClient.getEntries({
+      content_type: 'blogPost',
+    });
+
+    // Fetch projects
+    const projects = await contentfulClient.getEntries({
+      content_type: 'project',
+    });
+
+    // Fetch services
+    const services = await contentfulClient.getEntries({
+      content_type: 'service',
+    });
+
+    return {
+      blogs: blogs.items.map(item => `/blog/${item.fields.slug}`),
+      projects: projects.items.map(item => `/projects/${item.fields.slug}`),
+      services: services.items.map(item => `/services/${item.fields.slug}`)
+    };
+  } catch (error) {
+    console.error('Error fetching Contentful entries:', error);
+    return { blogs: [], projects: [], services: [] };
+  }
 }
 
 function extractRoutesFromAST(ast: any): string[] {
@@ -67,7 +102,7 @@ function getRouteConfig(route: string): { changefreq: SitemapURL['changefreq']; 
 
   // Blog posts
   if (route.startsWith('/blog/')) {
-    return { changefreq: 'monthly', priority: 0.7 };
+    return { changefreq: 'weekly', priority: 0.7 };
   }
 
   // Default
@@ -93,7 +128,7 @@ ${urlElements}
 
 async function generateSitemap() {
   try {
-    // Read App.tsx
+    // Read App.tsx for static routes
     const appTsxPath = path.resolve(__dirname, '../src/App.tsx');
     const appTsxContent = fs.readFileSync(appTsxPath, 'utf-8');
 
@@ -103,11 +138,20 @@ async function generateSitemap() {
       plugins: ['jsx', 'typescript'],
     });
 
-    // Extract routes
-    const routes = extractRoutesFromAST(ast);
+    // Extract static routes
+    const staticRoutes = extractRoutesFromAST(ast);
+
+    // Get dynamic routes from Contentful
+    const contentfulRoutes = await getContentfulEntries();
+    const allRoutes = [
+      ...staticRoutes,
+      ...contentfulRoutes.blogs,
+      ...contentfulRoutes.projects,
+      ...contentfulRoutes.services
+    ];
 
     // Generate sitemap URLs
-    const sitemapUrls: SitemapURL[] = routes.map((route) => {
+    const sitemapUrls: SitemapURL[] = allRoutes.map((route) => {
       const { changefreq, priority } = getRouteConfig(route);
       return {
         loc: `${DOMAIN}${route}`,
