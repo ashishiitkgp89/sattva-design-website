@@ -1,9 +1,14 @@
 import fs from 'fs';
-import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
 import { parse } from '@babel/parser';
 import traverse from '@babel/traverse';
 import * as t from '@babel/types';
 import { createClient } from 'contentful';
+import './load-env.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const DOMAIN = 'https://sattvadesignconsultancy.com';
 
@@ -18,6 +23,59 @@ interface SitemapURL {
   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority: number;
 }
+
+// Static routes that might be missed in AST parsing
+const additionalStaticRoutes = [
+  // Service Areas
+  '/service-areas/lesliganj',
+  '/service-areas/chainpur',
+  '/service-areas/nawa-bazar',
+  '/service-areas/chhatarpur',
+  '/service-areas/hariharganj',
+  '/service-areas/satbarwa',
+  '/service-areas/garhwa',
+  '/service-areas/ranka',
+  '/service-areas/bhawnathpur',
+  '/service-areas/latehar',
+  '/service-areas/balumath',
+  '/service-areas/herhanj',
+  '/service-areas/hussainabad-japla',
+  '/service-areas/haidernagar',
+  '/service-areas/nagar-utari',
+  
+  // Projects
+  '/projects/modern-residence-chainpur',
+  '/projects/luxury-residence-chhatarpur',
+  '/projects/luxury-villa-daltonganj',
+  '/projects/modern-residence-hariharganj',
+  
+  // Services for Daltonganj
+  '/services/custom-home-design-daltonganj-medininagar',
+  '/services/luxury-villas-farmhouses-daltonganj-medininagar',
+  '/services/sustainable-green-architecture-daltonganj-medininagar',
+  '/services/commercial-architecture-daltonganj-medininagar',
+  '/services/industrial-architecture-daltonganj-medininagar',
+  '/services/urban-planning-daltonganj-medininagar',
+  '/services/interior-design-daltonganj-medininagar',
+  '/services/construction-management-daltonganj-medininagar',
+  '/services/renovation-daltonganj-medininagar',
+  '/services/building-approvals-daltonganj-medininagar',
+  '/services/retail-stores-showrooms-daltonganj-medininagar',
+  '/services/hotels-hospitality-design-daltonganj-medininagar',
+  '/services/educational-institutions-daltonganj-medininagar',
+  '/services/healthcare-hospitals-daltonganj-medininagar',
+  '/services/landscape-architecture-daltonganj-medininagar',
+  '/services/public-spaces-infrastructure-daltonganj-medininagar',
+  '/services/designed-blueprints-daltonganj-medininagar',
+  '/services/project-estimation-daltonganj-medininagar',
+  '/services/commercial-interior-design-daltonganj-medininagar',
+  '/services/custom-furniture-decor-daltonganj-medininagar',
+  '/services/office-commercial-renovation-daltonganj-medininagar',
+  '/services/retail-showroom-remodeling-daltonganj-medininagar',
+  '/services/3d-visualization-rendering-daltonganj-medininagar',
+  '/services/facade-exterior-design-daltonganj-medininagar',
+  '/services/vastu-compliant-architecture-daltonganj-medininagar'
+];
 
 async function getContentfulEntries() {
   try {
@@ -64,7 +122,10 @@ function extractRoutesFromAST(ast: any): string[] {
         );
 
         if (pathProp && t.isJSXAttribute(pathProp) && t.isStringLiteral(pathProp.value)) {
-          routes.push(pathProp.value.value);
+          const route = pathProp.value.value;
+          if (route !== '*') { // Exclude catch-all routes
+            routes.push(route);
+          }
         }
       }
     },
@@ -129,7 +190,7 @@ ${urlElements}
 async function generateSitemap() {
   try {
     // Read App.tsx for static routes
-    const appTsxPath = path.resolve(__dirname, '../src/App.tsx');
+    const appTsxPath = resolve(__dirname, '../src/App.tsx');
     const appTsxContent = fs.readFileSync(appTsxPath, 'utf-8');
 
     // Parse the file
@@ -139,12 +200,18 @@ async function generateSitemap() {
     });
 
     // Extract static routes
-    const staticRoutes = extractRoutesFromAST(ast);
+    const staticRoutes = [
+      ...extractRoutesFromAST(ast),
+      ...additionalStaticRoutes
+    ];
+
+    // Remove duplicates
+    const uniqueStaticRoutes = Array.from(new Set(staticRoutes));
 
     // Get dynamic routes from Contentful
     const contentfulRoutes = await getContentfulEntries();
     const allRoutes = [
-      ...staticRoutes,
+      ...uniqueStaticRoutes,
       ...contentfulRoutes.blogs,
       ...contentfulRoutes.projects,
       ...contentfulRoutes.services
@@ -160,14 +227,18 @@ async function generateSitemap() {
       };
     });
 
+    // Sort URLs for consistency
+    sitemapUrls.sort((a, b) => a.loc.localeCompare(b.loc));
+
     // Generate XML
     const xml = generateSitemapXML(sitemapUrls);
 
     // Write sitemap.xml
-    const sitemapPath = path.resolve(__dirname, '../public/sitemap.xml');
+    const sitemapPath = resolve(__dirname, '../public/sitemap.xml');
     fs.writeFileSync(sitemapPath, xml);
 
     console.log('Sitemap generated successfully!');
+    console.log(`Total URLs in sitemap: ${sitemapUrls.length}`);
   } catch (error) {
     console.error('Error generating sitemap:', error);
     process.exit(1);

@@ -8,7 +8,7 @@
     "build": "npm run generate-sitemap && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate-sitemap": "ts-node -r ./scripts/load-env.ts scripts/generate-sitemap.ts"
+    "generate-sitemap": "npx ts-node-esm --experimental-specifier-resolution=node --project scripts/tsconfig.json scripts/generate-sitemap.ts"
   },
   "dependencies": {
     "@cloudinary/react": "^1.13.0",
@@ -51,6 +51,8 @@
     "@types/babel__traverse": "^7.20.5",
     "dotenv": "^16.0.3",
     "dotenv-expand": "^10.0.0",
-    "@types/dotenv": "^8.2.0"
+    "@types/dotenv": "^8.2.0",
+    "@types/dotenv-expand": "^5.0.0",
+    "ts-node": "^10.9.2"
   }
 }
