@@ -5,7 +5,10 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Projects from './pages/Projects';
+import ProjectDetail from './pages/ProjectDetail';
 import ServiceDetail from './pages/ServiceDetail';
+import NotFound from './pages/NotFound';
 import DaltonganjMedininagar from './pages/service-areas/DaltonganjMedininagar';
 import Lesliganj from './pages/service-areas/Lesliganj';
 import Chainpur from './pages/service-areas/Chainpur';
@@ -37,6 +40,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:slug" element={<ProjectDetail />} />
             <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/service-areas/daltonganj-medininagar" element={<DaltonganjMedininagar />} />
             <Route path="/service-areas/lesliganj" element={<Lesliganj />} />
@@ -58,6 +63,7 @@ function App() {
             <Route path="/projects/luxury-residence-chhatarpur" element={<LuxuryResidenceChhatarpur />} />
             <Route path="/projects/luxury-villa-daltonganj" element={<LuxuryVillaDaltonganj />} />
             <Route path="/projects/modern-residence-hariharganj" element={<ModernResidenceHariharganj />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
