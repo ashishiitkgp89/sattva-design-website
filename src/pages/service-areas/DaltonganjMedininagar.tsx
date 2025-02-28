@@ -9,9 +9,9 @@ export default function DaltonganjMedininagar() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "ArchitecturalFirm",
-    "name": "Sattva Design",
+    "name": "Sattva Design - Daltonganj (Medininagar)",
     "image": "https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png",
-    "description": "Leading architectural and interior design firm in Daltonganj (Medininagar), specializing in sustainable and modern design solutions.",
+    "description": "Leading architectural and interior design firm in Daltonganj (Medininagar), offering comprehensive design and construction services.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Shop no-14, 1st Floor Zila Parishad Market Kutchery, Railway crossing Road, Jail Hata Rd",
@@ -22,41 +22,208 @@ export default function DaltonganjMedininagar() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 24.0410025,
-      "longitude": 84.0672999
+      "latitude": "24.0410025",
+      "longitude": "84.0672999"
     },
-    "url": "https://sattvadesign.in/service-areas/daltonganj-medininagar",
     "telephone": "+917209567678",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "09:00",
-        "closes": "16:00"
-      }
-    ]
+    "email": "sattvadesignconsultancy@gmail.com"
+  };
+
+  const services = {
+    residential: {
+      title: "Residential Architecture",
+      items: [
+        { 
+          name: "Custom Home Design in Daltonganj (Medininagar)", 
+          slug: "custom-home-design-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Luxury Villas & Farmhouses in Daltonganj (Medininagar)", 
+          slug: "luxury-villas-farmhouses-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Sustainable & Green Architecture in Daltonganj (Medininagar)", 
+          slug: "sustainable-green-architecture-daltonganj-medininagar",
+          available: true
+        }
+      ]
+    },
+    commercial: {
+      title: "Commercial Architecture",
+      items: [
+        { 
+          name: "Commercial Architecture in Daltonganj (Medininagar)", 
+          slug: "commercial-architecture-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Retail Stores & Showrooms in Daltonganj (Medininagar)", 
+          slug: "retail-stores-showrooms-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Hotels & Hospitality Design in Daltonganj (Medininagar)", 
+          slug: "hotels-hospitality-design-daltonganj-medininagar",
+          available: true
+        }
+      ]
+    },
+    industrial: {
+      title: "Industrial & Institutional",
+      items: [
+        { 
+          name: "Industrial Architecture in Daltonganj (Medininagar)", 
+          slug: "industrial-architecture-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Educational Institutions in Daltonganj (Medininagar)", 
+          slug: "educational-institutions-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Healthcare & Hospitals in Daltonganj (Medininagar)", 
+          slug: "healthcare-hospitals-daltonganj-medininagar",
+          available: true
+        }
+      ]
+    },
+    urban: {
+      title: "Urban & Landscape Planning",
+      items: [
+        { 
+          name: "Urban Planning in Daltonganj (Medininagar)", 
+          slug: "urban-planning-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Landscape Architecture in Daltonganj (Medininagar)", 
+          slug: "landscape-architecture-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Public Spaces & Infrastructure in Daltonganj (Medininagar)", 
+          slug: "public-spaces-infrastructure-daltonganj-medininagar",
+          available: true
+        }
+      ]
+    },
+    approvals: {
+      title: "Naksha Pass & Approvals",
+      items: [
+        { 
+          name: "Building Approvals in Daltonganj (Medininagar)", 
+          slug: "building-approvals-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Designed Blueprints in Daltonganj (Medininagar)", 
+          slug: "designed-blueprints-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Project Estimation in Daltonganj (Medininagar)", 
+          slug: "project-estimation-daltonganj-medininagar",
+          available: true
+        }
+      ]
+    },
+    interior: {
+      title: "Interior Design Services",
+      items: [
+        { 
+          name: "Interior Design in Daltonganj (Medininagar)", 
+          slug: "interior-design-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Commercial Interior Design in Daltonganj (Medininagar)", 
+          slug: "commercial-interior-design-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Custom Furniture & Décor in Daltonganj (Medininagar)", 
+          slug: "custom-furniture-decor-daltonganj-medininagar",
+          available: true
+        }
+      ]
+    },
+    construction: {
+      title: "Civil Engineering & Construction",
+      items: [
+        { 
+          name: "Construction Management in Daltonganj (Medininagar)", 
+          slug: "construction-management-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Structural Engineering in Daltonganj (Medininagar)", 
+          slug: "structural-engineering-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Project Management in Daltonganj (Medininagar)", 
+          slug: "project-management-daltonganj-medininagar",
+          available: true
+        }
+      ]
+    },
+    renovation: {
+      title: "Renovation & Remodeling",
+      items: [
+        { 
+          name: "Renovation Services in Daltonganj (Medininagar)", 
+          slug: "renovation-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Office & Commercial Renovation in Daltonganj (Medininagar)", 
+          slug: "office-commercial-renovation-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Retail & Showroom Remodeling in Daltonganj (Medininagar)", 
+          slug: "retail-showroom-remodeling-daltonganj-medininagar",
+          available: true
+        }
+      ]
+    },
+    specialized: {
+      title: "Specialized Services",
+      items: [
+        { 
+          name: "3D Visualization & Rendering in Daltonganj (Medininagar)", 
+          slug: "3d-visualization-rendering-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Facade & Exterior Design in Daltonganj (Medininagar)", 
+          slug: "facade-exterior-design-daltonganj-medininagar",
+          available: true
+        },
+        { 
+          name: "Vastu-Compliant Architecture in Daltonganj (Medininagar)", 
+          slug: "vastu-compliant-architecture-daltonganj-medininagar",
+          available: true
+        }
+      ]
+    }
   };
 
   return (
     <>
       <Helmet>
-        <title>Sattva Design - Premier Architecture & Interior Design in Daltonganj | Medininagar</title>
+        <title>Architecture & Interior Design Services in Daltonganj (Medininagar) | Sattva Design</title>
         <meta 
           name="description" 
-          content="Transform your space with Sattva Design's expert architectural and interior design services in Daltonganj (Medininagar). Specializing in sustainable, modern design solutions. Contact us for a consultation."
+          content="Leading architectural firm in Daltonganj (Medininagar) offering comprehensive design services including residential, commercial, interior design, and construction services."
         />
         <meta 
           name="keywords" 
-          content="architecture firm Daltonganj, interior design Medininagar, sustainable architecture, modern home design, commercial architecture, Jharkhand architects, luxury interior design, green building"
+          content="architecture, interior design, construction, Daltonganj, Medininagar, residential design, commercial design, Sattva Design"
         />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://sattvadesign.in/service-areas/daltonganj-medininagar" />
         <script type="application/ld+json">
           {JSON.stringify(localBusinessSchema)}
         </script>
@@ -64,262 +231,139 @@ export default function DaltonganjMedininagar() {
 
       <div className="pt-20">
         {/* Hero Section */}
-        <div className="relative h-[60vh] bg-gray-100">
-          <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3')] bg-cover bg-center">
-            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-              <div className="text-center text-white max-w-4xl px-4">
-                <h1 className="text-4xl md:text-6xl font-serif mb-6">
-                  Elevating Spaces in Daltonganj
-                </h1>
-                <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  Award-winning architectural design firm bringing world-class design solutions to Medininagar
-                </p>
-                <a 
-                  href="#contact"
-                  className="inline-block bg-white text-black px-8 py-3 text-lg font-medium hover:bg-gray-100 transition-colors"
-                >
-                  Schedule a Consultation
-                </a>
-              </div>
-            </div>
+        <div className="relative h-[40vh] bg-gray-100">
+          <img
+            src="https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png"
+            alt="Sattva Design Office in Daltonganj"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <h1 className="text-4xl md:text-5xl text-white font-serif text-center">
+              Architecture & Design Services<br />
+              in Daltonganj (Medininagar)
+            </h1>
           </div>
         </div>
 
-        {/* Overview Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-serif mb-6">Transforming Daltonganj's Architectural Landscape</h2>
-              <p className="text-gray-600 text-lg">
-                At Sattva Design, we blend contemporary design principles with local cultural elements 
-                to create spaces that are both innovative and contextually relevant. Our team brings 
-                international expertise with deep local understanding to every project in Daltonganj.
+        {/* Main Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Introduction */}
+          <div className="prose max-w-none mb-12">
+            <p className="text-xl text-gray-600">
+              Sattva Design is your premier architectural and interior design firm in Daltonganj (Medininagar), 
+              offering comprehensive design and construction services. With our expertise in both traditional and 
+              modern architecture, we create spaces that are both functional and aesthetically pleasing.
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {Object.entries(services).map(([key, category]) => (
+              <div key={key} className="bg-white rounded-lg shadow-md p-6">
+                <h2 className="text-2xl font-serif mb-4">{category.title}</h2>
+                <ul className="space-y-2">
+                  {category.items.map((service) => (
+                    <li key={service.slug}>
+                      {service.available ? (
+                        <Link
+                          to={`/services/${service.slug}`}
+                          className="flex items-center justify-between text-gray-600 hover:text-gray-900 transition-colors"
+                        >
+                          <span>{service.name}</span>
+                          <ChevronRight className="w-4 h-4" />
+                        </Link>
+                      ) : (
+                        <div className="flex items-center justify-between text-gray-400 cursor-not-allowed">
+                          <span>{service.name}</span>
+                          <span className="text-xs bg-gray-100 px-2 py-1 rounded">Coming Soon</span>
+                        </div>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Contact Information */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div>
+              <h2 className="text-2xl font-serif mb-6">Visit Our Office</h2>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <MapPin className="w-6 h-6 text-gray-400 mt-1" />
+                  <div>
+                    <h3 className="font-medium mb-2">Address</h3>
+                    <p className="text-gray-600">
+                      Shop no-14, 1st Floor Zila Parishad Market Kutchery,<br />
+                      Railway crossing Road, Jail Hata Rd,<br />
+                      Medininagar, Jharkhand 822101
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <Phone className="w-6 h-6 text-gray-400 mt-1" />
+                  <div>
+                    <h3 className="font-medium mb-2">Phone</h3>
+                    <p className="text-gray-600">
+                      <a href="tel:+917209567678" className="hover:text-gray-900 transition-colors">
+                        +91 7209567678
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <Mail className="w-6 h-6 text-gray-400 mt-1" />
+                  <div>
+                    <h3 className="font-medium mb-2">Email</h3>
+                    <p className="text-gray-600">
+                      <a href="mailto:sattvadesignconsultancy@gmail.com" className="hover:text-gray-900 transition-colors">
+                        sattvadesignconsultancy@gmail.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <Clock className="w-6 h-6 text-gray-400 mt-1" />
+                  <div>
+                    <h3 className="font-medium mb-2">Working Hours</h3>
+                    <p className="text-gray-600">
+                      Monday - Saturday: 10:00 AM - 7:00 PM<br />
+                      Sunday: Closed
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="h-[400px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7673460244392!2d84.06729989999999!3d24.0410025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398c777187960e53%3A0x97413753729d2041!2sSattva%20Design%20Consultancy!5e0!3m2!1sen!2sin!4v1709052136037!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg shadow-md"
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-gray-50 rounded-lg p-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-serif mb-4">Start Your Project</h2>
+              <p className="text-gray-600">
+                Ready to begin your architectural journey? Contact us for a consultation.
               </p>
             </div>
-
-            {/* Key Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <div className="bg-white p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-serif mb-4">Residential Architecture</h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li>• Custom Home Design</li>
-                  <li>• Villa & Bungalow Projects</li>
-                  <li>• Apartment Interiors</li>
-                  <li>• Space Planning</li>
-                </ul>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-serif mb-4">Commercial Design</h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li>• Office Spaces</li>
-                  <li>• Retail Design</li>
-                  <li>• Restaurant & Hospitality</li>
-                  <li>• Corporate Interiors</li>
-                </ul>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-serif mb-4">Specialized Services</h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li>• Sustainable Design</li>
-                  <li>• Heritage Restoration</li>
-                  <li>• Landscape Design</li>
-                  <li>• Project Management</li>
-                </ul>
-              </div>
-            </div>
+            <ContactSection isFullPage={false} />
           </div>
-        </section>
-
-        {/* Why Choose Us Section */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-serif mb-12 text-center">Why Choose Sattva Design in Daltonganj?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-serif mb-4">Local Expertise</h3>
-                <p className="text-gray-600">
-                  Deep understanding of Daltonganj's climate, culture, and building regulations, 
-                  ensuring contextually appropriate designs.
-                </p>
-              </div>
-              <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-serif mb-4">Sustainable Approach</h3>
-                <p className="text-gray-600">
-                  Integration of eco-friendly materials and energy-efficient solutions in every project.
-                </p>
-              </div>
-              <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-serif mb-4">End-to-End Service</h3>
-                <p className="text-gray-600">
-                  Comprehensive project management from concept to completion, ensuring seamless execution.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Areas We Serve Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-serif mb-8">Areas We Serve in Daltonganj</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div>
-                <h3 className="text-xl font-serif mb-4">Central Daltonganj</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Medininagar City Center</li>
-                  <li>• Railway Colony Area</li>
-                  <li>• Civil Lines</li>
-                  <li>• Court Road</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-serif mb-4">Surrounding Areas</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Sudna</li>
-                  <li>• Pokhraha</li>
-                  <li>• Chainpur Road</li>
-                  <li>• Lesliganj Highway</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-serif mb-4">Emerging Localities</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• New Development Area</li>
-                  <li>• Industrial Zone</li>
-                  <li>• Educational Hub</li>
-                  <li>• Township Projects</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Projects Section */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-serif mb-12 text-center">Our Work in Daltonganj</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Project cards would go here - using placeholder images for now */}
-              <div className="group relative overflow-hidden rounded-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-                  alt="Luxury Villa Project in Daltonganj"
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center p-6">
-                    <h3 className="text-xl font-serif mb-2">Luxury Villa Project</h3>
-                    <p className="text-sm mb-4">Modern residential design in Civil Lines</p>
-                    <Link to="/projects/luxury-villa-daltonganj" className="text-white underline">
-                      View Project
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              {/* Add more project cards as needed */}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-serif mb-12 text-center">Client Testimonials</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <blockquote className="bg-white p-8 rounded-lg shadow-sm">
-                <p className="text-gray-600 mb-4">
-                  "Sattva Design transformed our commercial space into a modern marvel. Their attention 
-                  to detail and understanding of our needs was exceptional."
-                </p>
-                <footer className="font-medium">
-                  — Rajesh Kumar, Business Owner
-                </footer>
-              </blockquote>
-              <blockquote className="bg-white p-8 rounded-lg shadow-sm">
-                <p className="text-gray-600 mb-4">
-                  "Working with Sattva Design was a pleasure. They created our dream home while keeping 
-                  our budget and timeline in mind."
-                </p>
-                <footer className="font-medium">
-                  — Priya Singh, Homeowner
-                </footer>
-              </blockquote>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section id="contact" className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-serif mb-8">Get in Touch</h2>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="w-6 h-6 text-gray-400 mt-1" />
-                    <div>
-                      <h3 className="font-medium mb-2">Office Address</h3>
-                      <p className="text-gray-600">
-                        Shop no-14, 1st Floor Zila Parishad Market Kutchery,<br />
-                        Railway crossing Road, Jail Hata Rd,<br />
-                        Medininagar, Jharkhand 822101
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Phone className="w-6 h-6 text-gray-400 mt-1" />
-                    <div>
-                      <h3 className="font-medium mb-2">Phone</h3>
-                      <p className="text-gray-600">
-                        <a href="tel:+917209567678" className="hover:text-gray-900 transition-colors">
-                          +91 7209567678
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Mail className="w-6 h-6 text-gray-400 mt-1" />
-                    <div>
-                      <h3 className="font-medium mb-2">Email</h3>
-                      <p className="text-gray-600">
-                        <a href="mailto:sattvadesignconsultancy@gmail.com" className="hover:text-gray-900 transition-colors">
-                          sattvadesignconsultancy@gmail.com
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Clock className="w-6 h-6 text-gray-400 mt-1" />
-                    <div>
-                      <h3 className="font-medium mb-2">Working Hours</h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</li>
-                        <li><strong>Saturday:</strong> 9:00 AM - 4:00 PM</li>
-                        <li><strong>Sunday:</strong> Closed</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="aspect-w-16 aspect-h-9 mb-8">
-                  <iframe
-                    title="Sattva Design Daltonganj Office Location"
-                    width="100%"
-                    height="450"
-                    style={{ border: 0 }}
-                    loading="lazy"
-                    allowFullScreen
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7673460244392!2d84.06729989999999!3d24.0410025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398c777187960e53%3A0x97413753729d2041!2sSattva%20Design%20Consultancy!5e0!3m2!1sen!2sin!4v1709052136037!5m2!1sen!2sin"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Form Section */}
-        <ContactSection isFullPage={false} />
+        </div>
       </div>
     </>
   );
