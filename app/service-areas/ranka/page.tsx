@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Architecture & Interior Design in Ranka | Sattva Design',
     description:
-      "Architecture, interior design and building-approval services for Ranka, Garhwa district, delivered from Sattva Design's Medininagar head office. Custom homes, commercial spaces and naksha pass support.",
+      "Architecture, interior design and building-approval services for Ranka, Garhwa district, delivered from Sattva Design's Medininagar office. Custom homes, commercial spaces and naksha pass support.",
     url: 'https://sattvadesignconsultancy.com/service-areas/ranka',
   },
 };
@@ -26,7 +26,7 @@ export default function Ranka() {
     "@type": "ArchitecturalFirm",
     "name": "Sattva Design - Ranka",
     "image": "https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png",
-    "description": "Architecture and interior design firm serving Ranka in Garhwa district, working from Sattva Design's Medininagar head office.",
+    "description": "Architecture and interior design firm serving Ranka in Garhwa district, working from Sattva Design's Medininagar office.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Shop no-14, 1st Floor Zila Parishad Market Kutchery, Railway crossing Road, Jail Hata Rd",
@@ -52,7 +52,7 @@ export default function Ranka() {
   const faqs = [
     {
       q: "Can Sattva Design take on a project in Ranka from the Medininagar office?",
-      a: "Yes. Ranka is a block town in Garhwa district within our regular working area, and we serve it from our Medininagar head office. We plan site visits ahead of time so a single trip covers measurements, the brief and a look at the plot before we begin drawing.",
+      a: "Yes. Ranka is a block town in Garhwa district within our regular working area, and we serve it from our Medininagar office. We plan site visits ahead of time so a single trip covers measurements, the brief and a look at the plot before we begin drawing.",
     },
     {
       q: "What kinds of buildings do you design in Ranka?",
@@ -85,7 +85,7 @@ export default function Ranka() {
                   Architecture & Interior Design in Ranka
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  House plans, interiors and building approvals for Ranka in Garhwa district, served from our Medininagar head office
+                  House plans, interiors and building approvals for Ranka in Garhwa district, served from our Medininagar office
                 </p>
                 <a
                   href="#contact"
@@ -106,7 +106,7 @@ export default function Ranka() {
               <p className="text-gray-600 text-lg">
                 Ranka is a block town in Garhwa district, and the work we are asked to do here is mostly
                 practical and home-focused: a house on a family plot, a shop along the road, or interiors
-                for a building that is already up. We serve Ranka from our Medininagar head office and plan
+                for a building that is already up. We serve Ranka from our Medininagar office and plan
                 our visits so that one trip covers measuring the plot, understanding access and levels, and
                 talking through the brief and budget before any drawing begins.
               </p>

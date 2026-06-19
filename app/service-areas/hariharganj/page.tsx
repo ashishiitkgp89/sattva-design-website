@@ -63,7 +63,7 @@ export default function Hariharganj() {
   const faqs = [
     {
       q: 'Does Sattva Design serve Hariharganj?',
-      a: 'Yes. Hariharganj is part of the Palamu district we serve from Sattva Design\'s head office in Medininagar. We take on homes, commercial buildings and interior projects here, with site visits arranged from Medininagar.',
+      a: 'Yes. Hariharganj is part of the Palamu district we serve from Sattva Design\'s office in Medininagar. We take on homes, commercial buildings and interior projects here, with site visits arranged from Medininagar.',
     },
     {
       q: 'What design and architecture services are available for Hariharganj?',
@@ -97,7 +97,7 @@ export default function Hariharganj() {
                   Architecture & Interior Design in Hariharganj
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  Homes, commercial spaces and interiors for Hariharganj, served from our Medininagar head office
+                  Homes, commercial spaces and interiors for Hariharganj, served from our Medininagar office
                 </p>
                 <a
                   href="#contact"
@@ -116,7 +116,7 @@ export default function Hariharganj() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-serif mb-6">Architecture & Design Services in Hariharganj</h2>
               <p className="text-gray-600 text-lg">
-                Hariharganj is a block town in the Palamu district, and we serve it from Sattva Design's head office in
+                Hariharganj is a block town in the Palamu district, and we serve it from Sattva Design's office in
                 Medininagar. Most of the enquiries we receive from here are for family homes on residential plots, shop
                 and commercial fronts, and interiors for houses being rebuilt or extended. With Medininagar close by, our
                 team can travel to Hariharganj sites for measurement, marking and supervision during construction. We

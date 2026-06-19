@@ -7,14 +7,14 @@ export const metadata: Metadata = {
     absolute: 'Architecture & Interior Design in Herhanj | Sattva Design',
   },
   description:
-    'Architecture and interior design services in Herhanj, Latehar district. Sattva Design plans and builds practical, durable homes and commercial spaces, served from our Medininagar head office.',
+    'Architecture and interior design services in Herhanj, Latehar district. Sattva Design plans and builds practical, durable homes and commercial spaces, served from our Medininagar office.',
   keywords:
     'architect in Herhanj, interior design Herhanj, house design Herhanj, naksha pass Herhanj, architecture firm Latehar, Sattva Design',
   alternates: { canonical: 'https://sattvadesignconsultancy.com/service-areas/herhanj' },
   openGraph: {
     title: 'Architecture & Interior Design in Herhanj | Sattva Design',
     description:
-      'Architecture and interior design services in Herhanj, Latehar district. Sattva Design plans and builds practical, durable homes and commercial spaces, served from our Medininagar head office.',
+      'Architecture and interior design services in Herhanj, Latehar district. Sattva Design plans and builds practical, durable homes and commercial spaces, served from our Medininagar office.',
     url: 'https://sattvadesignconsultancy.com/service-areas/herhanj',
   },
 };
@@ -25,7 +25,7 @@ export default function Herhanj() {
     '@type': 'ArchitecturalFirm',
     name: 'Sattva Design - Herhanj',
     description:
-      "Architecture and interior design services in Herhanj, Latehar district, served from Sattva Design's head office in Medininagar (Daltonganj).",
+      "Architecture and interior design services in Herhanj, Latehar district, served from Sattva Design's office in Medininagar (Daltonganj).",
     image:
       'https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png',
     address: {
@@ -51,7 +51,7 @@ export default function Herhanj() {
   const faqs = [
     {
       q: 'Does Sattva Design serve Herhanj?',
-      a: 'Yes. We cover Herhanj from our head office in Medininagar (Daltonganj), travelling out for site visits and construction supervision.',
+      a: 'Yes. We cover Herhanj from our office in Medininagar (Daltonganj), travelling out for site visits and construction supervision.',
     },
     {
       q: 'What types of projects do you handle in Herhanj?',
@@ -84,7 +84,7 @@ export default function Herhanj() {
                   Architecture & Interior Design in Herhanj
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  Practical, well-built homes and commercial spaces for Herhanj, designed from our Medininagar head office.
+                  Practical, well-built homes and commercial spaces for Herhanj, designed from our Medininagar office.
                 </p>
                 <a
                   href="#contact"
@@ -105,7 +105,7 @@ export default function Herhanj() {
               <p className="text-gray-600 text-lg">
                 Herhanj is a block in the Latehar district of Jharkhand, a largely rural area where
                 most building is individual homes on family land along with small roadside
-                commercial spaces. Sattva Design serves Herhanj from our head office in Medininagar
+                commercial spaces. Sattva Design serves Herhanj from our office in Medininagar
                 (Daltonganj). We focus on practical, durable designs that suit the plot, the local
                 climate and a realistic budget, taking a project from the first sketch through
                 structural drawings, approvals and finishing.

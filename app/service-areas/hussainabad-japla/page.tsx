@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     absolute: 'Architecture & Interior Design in Hussainabad (Japla) | Sattva Design',
   },
   description:
-    'Architecture and interior design services in Hussainabad and Japla, Palamu district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar head office.',
+    'Architecture and interior design services in Hussainabad and Japla, Palamu district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar office.',
   keywords:
     'architect in Hussainabad, interior design Japla, house design Hussainabad Japla, naksha pass Palamu, architecture firm Palamu, Sattva Design',
   alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Architecture & Interior Design in Hussainabad (Japla) | Sattva Design',
     description:
-      'Architecture and interior design services in Hussainabad and Japla, Palamu district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar head office.',
+      'Architecture and interior design services in Hussainabad and Japla, Palamu district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar office.',
     url: 'https://sattvadesignconsultancy.com/service-areas/hussainabad-japla',
   },
 };
@@ -27,7 +27,7 @@ export default function HussainabadJapla() {
     '@type': 'ArchitecturalFirm',
     name: 'Sattva Design - Hussainabad (Japla)',
     description:
-      "Architecture and interior design services in Hussainabad and Japla, Palamu district, served from Sattva Design's head office in Medininagar (Daltonganj).",
+      "Architecture and interior design services in Hussainabad and Japla, Palamu district, served from Sattva Design's office in Medininagar (Daltonganj).",
     image:
       'https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png',
     address: {
@@ -53,7 +53,7 @@ export default function HussainabadJapla() {
   const faqs = [
     {
       q: 'Do you serve both Hussainabad and Japla?',
-      a: 'Yes. We cover Hussainabad and the adjoining Japla area from our head office in Medininagar (Daltonganj), with site visits and supervision as needed.',
+      a: 'Yes. We cover Hussainabad and the adjoining Japla area from our office in Medininagar (Daltonganj), with site visits and supervision as needed.',
     },
     {
       q: 'What kinds of projects do you take on in Hussainabad and Japla?',
@@ -86,7 +86,7 @@ export default function HussainabadJapla() {
                   Architecture & Interior Design in Hussainabad (Japla)
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  Homes, shops and commercial projects designed for Hussainabad and Japla, served from our Medininagar head office.
+                  Homes, shops and commercial projects designed for Hussainabad and Japla, served from our Medininagar office.
                 </p>
                 <a
                   href="#contact"
@@ -108,7 +108,7 @@ export default function HussainabadJapla() {
                 Hussainabad, together with the neighbouring town of Japla on the banks of the Son
                 river, is one of the larger settlements in the Palamu district of Jharkhand, long
                 associated with its cement works and railway connection. Sattva Design works here
-                from our head office in Medininagar (Daltonganj). We help homeowners, shopkeepers
+                from our office in Medininagar (Daltonganj). We help homeowners, shopkeepers
                 and businesses across Hussainabad and Japla plan and build, from individual houses
                 and shop-cum-residence buildings to commercial and small industrial spaces, handling
                 design, drawings, approvals and interiors.

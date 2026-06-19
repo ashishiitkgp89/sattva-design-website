@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     absolute: 'Architecture & Interior Design in Haidernagar | Sattva Design',
   },
   description:
-    'Architecture and interior design services in Haidernagar, Palamu district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar head office.',
+    'Architecture and interior design services in Haidernagar, Palamu district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar office.',
   keywords:
     'architect in Haidernagar, interior design Haidernagar, house design Haidernagar, naksha pass Palamu, architecture firm Palamu, Sattva Design',
   alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Architecture & Interior Design in Haidernagar | Sattva Design',
     description:
-      'Architecture and interior design services in Haidernagar, Palamu district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar head office.',
+      'Architecture and interior design services in Haidernagar, Palamu district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar office.',
     url: 'https://sattvadesignconsultancy.com/service-areas/haidernagar',
   },
 };
@@ -27,7 +27,7 @@ export default function Haidernagar() {
     '@type': 'ArchitecturalFirm',
     name: 'Sattva Design - Haidernagar',
     description:
-      "Architecture and interior design services in Haidernagar, Palamu district, served from Sattva Design's head office in Medininagar (Daltonganj).",
+      "Architecture and interior design services in Haidernagar, Palamu district, served from Sattva Design's office in Medininagar (Daltonganj).",
     image:
       'https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png',
     address: {
@@ -53,7 +53,7 @@ export default function Haidernagar() {
   const faqs = [
     {
       q: 'Does Sattva Design work in Haidernagar?',
-      a: 'Yes. Haidernagar is within the area we serve from our head office in Medininagar (Daltonganj), with site visits and construction supervision.',
+      a: 'Yes. Haidernagar is within the area we serve from our office in Medininagar (Daltonganj), with site visits and construction supervision.',
     },
     {
       q: 'What projects do you take on in Haidernagar?',
@@ -86,7 +86,7 @@ export default function Haidernagar() {
                   Architecture & Interior Design in Haidernagar
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  Custom homes and commercial spaces for Haidernagar, designed and built from our Medininagar head office.
+                  Custom homes and commercial spaces for Haidernagar, designed and built from our Medininagar office.
                 </p>
                 <a
                   href="#contact"
@@ -107,7 +107,7 @@ export default function Haidernagar() {
               <p className="text-gray-600 text-lg">
                 Haidernagar is a town and block in the Palamu district of Jharkhand, where most
                 construction is individual homes on family plots together with small shops and
-                commercial buildings. Sattva Design serves Haidernagar from our head office in
+                commercial buildings. Sattva Design serves Haidernagar from our office in
                 Medininagar (Daltonganj). We take a project from the first plan through structural
                 drawings, approvals, construction and interiors, focusing on designs that fit the
                 plot, the budget and the local climate.

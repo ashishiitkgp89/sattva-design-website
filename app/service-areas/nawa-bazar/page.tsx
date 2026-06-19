@@ -63,7 +63,7 @@ export default function NawaBazar() {
   const faqs = [
     {
       q: 'Does Sattva Design serve Nawa Bazar?',
-      a: 'Yes. Nawa Bazar is in the Palamu district, which we serve from Sattva Design\'s head office in Medininagar. We take on shops and commercial fronts, homes and interior projects here, with site visits arranged from Medininagar.',
+      a: 'Yes. Nawa Bazar is in the Palamu district, which we serve from Sattva Design\'s office in Medininagar. We take on shops and commercial fronts, homes and interior projects here, with site visits arranged from Medininagar.',
     },
     {
       q: 'What services do you offer for Nawa Bazar projects?',
@@ -97,7 +97,7 @@ export default function NawaBazar() {
                   Architecture & Interior Design in Nawa Bazar
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  Shops, homes and interiors for Nawa Bazar, designed and delivered from our Medininagar head office
+                  Shops, homes and interiors for Nawa Bazar, designed and delivered from our Medininagar office
                 </p>
                 <a
                   href="#contact"
@@ -116,7 +116,7 @@ export default function NawaBazar() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-serif mb-6">Architecture & Design Services in Nawa Bazar</h2>
               <p className="text-gray-600 text-lg">
-                Nawa Bazar is a block in the Palamu district, and we serve it from Sattva Design's head office in
+                Nawa Bazar is a block in the Palamu district, and we serve it from Sattva Design's office in
                 Medininagar. A good share of the enquiries we get from here are for shop and commercial fronts along the
                 market, alongside family homes and interior work for houses being rebuilt or extended. Working from
                 Medininagar lets our team reach Nawa Bazar sites for measurement, marking and supervision during

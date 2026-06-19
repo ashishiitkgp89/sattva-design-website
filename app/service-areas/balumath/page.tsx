@@ -7,14 +7,14 @@ export const metadata: Metadata = {
     absolute: 'Architecture & Interior Design in Balumath | Sattva Design',
   },
   description:
-    'Architecture and interior design services in Balumath, Latehar district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar head office.',
+    'Architecture and interior design services in Balumath, Latehar district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar office.',
   keywords:
     'architect in Balumath, interior design Balumath, house design Balumath, naksha pass Balumath, architecture firm Latehar, Sattva Design',
   alternates: { canonical: 'https://sattvadesignconsultancy.com/service-areas/balumath' },
   openGraph: {
     title: 'Architecture & Interior Design in Balumath | Sattva Design',
     description:
-      'Architecture and interior design services in Balumath, Latehar district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar head office.',
+      'Architecture and interior design services in Balumath, Latehar district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar office.',
     url: 'https://sattvadesignconsultancy.com/service-areas/balumath',
   },
 };
@@ -25,7 +25,7 @@ export default function Balumath() {
     '@type': 'ArchitecturalFirm',
     name: 'Sattva Design - Balumath',
     description:
-      "Architecture and interior design services in Balumath, Latehar district, served from Sattva Design's head office in Medininagar (Daltonganj).",
+      "Architecture and interior design services in Balumath, Latehar district, served from Sattva Design's office in Medininagar (Daltonganj).",
     image:
       'https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png',
     address: {
@@ -51,7 +51,7 @@ export default function Balumath() {
   const faqs = [
     {
       q: 'Does Sattva Design take on projects in Balumath?',
-      a: 'Yes. Balumath is within the area we serve from our head office in Medininagar (Daltonganj). We travel to Balumath for site visits, measurements and construction supervision.',
+      a: 'Yes. Balumath is within the area we serve from our office in Medininagar (Daltonganj). We travel to Balumath for site visits, measurements and construction supervision.',
     },
     {
       q: 'What kinds of buildings do you design in Balumath?',
@@ -84,7 +84,7 @@ export default function Balumath() {
                   Architecture & Interior Design in Balumath
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  Homes, shops and commercial buildings designed and built across Balumath, served from our Medininagar head office.
+                  Homes, shops and commercial buildings designed and built across Balumath, served from our Medininagar office.
                 </p>
                 <a
                   href="#contact"
@@ -106,7 +106,7 @@ export default function Balumath() {
                 Balumath is a block town in the Latehar district of Jharkhand. Most building here is
                 individual homes on family plots, along with shops and small commercial units near
                 the main road and in the surrounding villages. Sattva Design works in Balumath from
-                our head office in Medininagar (Daltonganj), travelling out for measurement,
+                our office in Medininagar (Daltonganj), travelling out for measurement,
                 planning and construction supervision. We help families and shop owners take a plot
                 from a building plan and structural drawings through elevation, construction and
                 interiors, with designs that suit the plot size, budget and local climate.

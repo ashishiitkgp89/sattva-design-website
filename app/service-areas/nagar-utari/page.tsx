@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     absolute: 'Architecture & Interior Design in Nagar Utari | Sattva Design',
   },
   description:
-    'Architecture and interior design services in Nagar Utari, Garhwa district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar head office.',
+    'Architecture and interior design services in Nagar Utari, Garhwa district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar office.',
   keywords:
     'architect in Nagar Utari, interior design Nagar Utari, house design Nagar Utari, naksha pass Garhwa, architecture firm Garhwa, Sattva Design',
   alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Architecture & Interior Design in Nagar Utari | Sattva Design',
     description:
-      'Architecture and interior design services in Nagar Utari, Garhwa district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar head office.',
+      'Architecture and interior design services in Nagar Utari, Garhwa district. Sattva Design plans and builds homes, shops and commercial spaces, served from our Medininagar office.',
     url: 'https://sattvadesignconsultancy.com/service-areas/nagar-utari',
   },
 };
@@ -27,7 +27,7 @@ export default function NagarUtari() {
     '@type': 'ArchitecturalFirm',
     name: 'Sattva Design - Nagar Utari',
     description:
-      "Architecture and interior design services in Nagar Utari, Garhwa district, served from Sattva Design's head office in Medininagar (Daltonganj).",
+      "Architecture and interior design services in Nagar Utari, Garhwa district, served from Sattva Design's office in Medininagar (Daltonganj).",
     image:
       'https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png',
     address: {
@@ -53,7 +53,7 @@ export default function NagarUtari() {
   const faqs = [
     {
       q: 'Do you take on projects in Nagar Utari?',
-      a: 'Yes. We serve Nagar Utari from our head office in Medininagar (Daltonganj), travelling out for site visits and supervision.',
+      a: 'Yes. We serve Nagar Utari from our office in Medininagar (Daltonganj), travelling out for site visits and supervision.',
     },
     {
       q: 'What kinds of buildings do you design in Nagar Utari?',
@@ -86,7 +86,7 @@ export default function NagarUtari() {
                   Architecture & Interior Design in Nagar Utari
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  Homes, shops and commercial buildings for Nagar Utari, designed from our Medininagar head office.
+                  Homes, shops and commercial buildings for Nagar Utari, designed from our Medininagar office.
                 </p>
                 <a
                   href="#contact"
@@ -107,7 +107,7 @@ export default function NagarUtari() {
               <p className="text-gray-600 text-lg">
                 Nagar Utari, in the Garhwa district of Jharkhand, is a town best known locally for
                 the Banshidhar temple and as a centre for the surrounding area. Sattva Design serves
-                Nagar Utari from our head office in Medininagar (Daltonganj). We help families and
+                Nagar Utari from our office in Medininagar (Daltonganj). We help families and
                 businesses here plan and build, from individual homes and shop-cum-residence
                 buildings to small commercial spaces, handling design, structural drawings,
                 approvals and interiors from the first sketch through to the finished building.

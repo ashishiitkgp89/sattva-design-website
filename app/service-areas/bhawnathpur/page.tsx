@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Architecture & Interior Design in Bhawnathpur | Sattva Design',
     description:
-      "Architecture, interior design and building-approval services for Bhawnathpur, Garhwa district, delivered from Sattva Design's Medininagar head office. Homes, commercial and staff buildings.",
+      "Architecture, interior design and building-approval services for Bhawnathpur, Garhwa district, delivered from Sattva Design's Medininagar office. Homes, commercial and staff buildings.",
     url: 'https://sattvadesignconsultancy.com/service-areas/bhawnathpur',
   },
 };
@@ -61,7 +61,7 @@ export default function Bhawnathpur() {
   const faqs = [
     {
       q: "Can Sattva Design handle a building project in Bhawnathpur from Medininagar?",
-      a: "Yes. Bhawnathpur lies in Garhwa district, within our regular working area, and we serve it from our Medininagar head office. We plan site visits in advance, take measurements on the plot and then do the design and drawing work from our studio.",
+      a: "Yes. Bhawnathpur lies in Garhwa district, within our regular working area, and we serve it from our Medininagar office. We plan site visits in advance, take measurements on the plot and then do the design and drawing work from our studio.",
     },
     {
       q: "What types of projects do you take on in Bhawnathpur?",
@@ -94,7 +94,7 @@ export default function Bhawnathpur() {
                   Architecture & Interior Design in Bhawnathpur
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  Homes, commercial buildings and approvals for Bhawnathpur in Garhwa district, handled from our Medininagar head office
+                  Homes, commercial buildings and approvals for Bhawnathpur in Garhwa district, handled from our Medininagar office
                 </p>
                 <a
                   href="#contact"
@@ -115,8 +115,7 @@ export default function Bhawnathpur() {
               <p className="text-gray-600 text-lg">
                 Bhawnathpur is a town in Garhwa district that sits in a mining and industrial belt, and that
                 mix shows up in the work we are asked to do here, from family homes and roadside shops to
-                small staff quarters and office buildings. We serve Bhawnathpur from our Medininagar head
-                office, visiting the plot to take measurements and understand the site, then preparing the
+                small staff quarters and office buildings. We serve Bhawnathpur from our Medininagar office, visiting the plot to take measurements and understand the site, then preparing the
                 layouts, drawings and approvals from our studio and staying involved through construction.
               </p>
             </div>

@@ -26,7 +26,7 @@ export default function Chainpur() {
     "@type": "ArchitecturalFirm",
     "name": "Sattva Design - Chainpur",
     "image": "https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png",
-    "description": "Architectural and interior design firm serving Chainpur in Palamu, Jharkhand, from our head office in Medininagar.",
+    "description": "Architectural and interior design firm serving Chainpur in Palamu, Jharkhand, from our office in Medininagar.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Shop no-14, 1st Floor Zila Parishad Market Kutchery, Railway crossing Road, Jail Hata Rd",
@@ -49,7 +49,7 @@ export default function Chainpur() {
   const faqs = [
     {
       q: 'Does Sattva Design take on projects in Chainpur?',
-      a: 'Yes. Chainpur is part of the Palamu district we serve from our head office in Medininagar. We handle homes, commercial spaces and interiors here, with site visits arranged from the Medininagar studio.',
+      a: 'Yes. Chainpur is part of the Palamu district we serve from our office in Medininagar. We handle homes, commercial spaces and interiors here, with site visits arranged from the Medininagar studio.',
     },
     {
       q: 'What design and architecture services are available for Chainpur?',
@@ -83,7 +83,7 @@ export default function Chainpur() {
                   Architecture & Interior Design in Chainpur
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  Houses, commercial buildings and interiors for Chainpur, served from our Medininagar head office
+                  Houses, commercial buildings and interiors for Chainpur, served from our Medininagar office
                 </p>
                 <a
                   href="#contact"
@@ -102,7 +102,7 @@ export default function Chainpur() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-serif mb-6">Architecture & Design Services in Chainpur</h2>
               <p className="text-gray-600 text-lg">
-                Chainpur is a block in the Palamu district, and we serve it from Sattva Design's head office in
+                Chainpur is a block in the Palamu district, and we serve it from Sattva Design's office in
                 Medininagar. The projects we are usually asked for here are family homes on residential plots, shop
                 and commercial fronts, and interior work for houses being rebuilt or extended. Because Medininagar is
                 close by, our team can travel to Chainpur for measurements, marking and supervision during

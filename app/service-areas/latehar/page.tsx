@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Architecture & Interior Design in Latehar | Sattva Design',
     description:
-      "Architecture, interior design and building-approval services for Latehar town and district, delivered from Sattva Design's Medininagar head office. Custom homes, commercial spaces and naksha pass support.",
+      "Architecture, interior design and building-approval services for Latehar town and district, delivered from Sattva Design's Medininagar office. Custom homes, commercial spaces and naksha pass support.",
     url: 'https://sattvadesignconsultancy.com/service-areas/latehar',
   },
 };
@@ -26,7 +26,7 @@ export default function Latehar() {
     "@type": "ArchitecturalFirm",
     "name": "Sattva Design - Latehar",
     "image": "https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png",
-    "description": "Architecture and interior design firm serving Latehar town and district, working from Sattva Design's Medininagar head office.",
+    "description": "Architecture and interior design firm serving Latehar town and district, working from Sattva Design's Medininagar office.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Shop no-14, 1st Floor Zila Parishad Market Kutchery, Railway crossing Road, Jail Hata Rd",
@@ -85,7 +85,7 @@ export default function Latehar() {
                   Architecture & Interior Design in Latehar
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  House plans, commercial buildings, interiors and approvals for Latehar, served from our Medininagar head office
+                  House plans, commercial buildings, interiors and approvals for Latehar, served from our Medininagar office
                 </p>
                 <a
                   href="#contact"
@@ -107,7 +107,7 @@ export default function Latehar() {
                 Latehar is the headquarters of Latehar district, a forested, hilly part of Jharkhand that was
                 carved out of the Palamu region where our office is based. That setting matters in practice:
                 sloping or uneven plots, local stone and timber, and a climate that rewards good orientation,
-                ventilation and shade. We serve Latehar from our Medininagar head office, visiting the site to
+                ventilation and shade. We serve Latehar from our Medininagar office, visiting the site to
                 read the ground and the access before working up plans that suit the plot rather than fighting it.
               </p>
             </div>

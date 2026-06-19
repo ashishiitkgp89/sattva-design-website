@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Architecture & Interior Design in Satbarwa | Sattva Design',
     description:
-      "Architecture, interior design and building-approval services for Satbarwa, delivered from Sattva Design's Medininagar head office. Custom homes, commercial spaces and naksha pass support.",
+      "Architecture, interior design and building-approval services for Satbarwa, delivered from Sattva Design's Medininagar office. Custom homes, commercial spaces and naksha pass support.",
     url: 'https://sattvadesignconsultancy.com/service-areas/satbarwa',
   },
 };
@@ -62,7 +62,7 @@ export default function Satbarwa() {
   const faqs = [
     {
       q: "Does Sattva Design take on projects in Satbarwa even though the office is in Medininagar?",
-      a: "Yes. Satbarwa is a short drive from our Medininagar head office, so it is one of the easiest Palamu locations for us to service. We schedule site visits, take measurements and meet clients on their plot, then carry out the design and drawing work from our studio.",
+      a: "Yes. Satbarwa is a short drive from our Medininagar office, so it is one of the easiest Palamu locations for us to service. We schedule site visits, take measurements and meet clients on their plot, then carry out the design and drawing work from our studio.",
     },
     {
       q: "What kinds of buildings do you design in Satbarwa?",
@@ -95,7 +95,7 @@ export default function Satbarwa() {
                   Architecture & Interior Design in Satbarwa
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  House plans, interiors and building approvals for Satbarwa, handled from our nearby Medininagar head office
+                  House plans, interiors and building approvals for Satbarwa, handled from our nearby Medininagar office
                 </p>
                 <a
                   href="#contact"
@@ -114,7 +114,7 @@ export default function Satbarwa() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-serif mb-6">Architecture and design services for Satbarwa</h2>
               <p className="text-gray-600 text-lg">
-                Satbarwa sits in Palamu district, close enough to our Medininagar head office that we treat
+                Satbarwa sits in Palamu district, close enough to our Medininagar office that we treat
                 it almost as a local catchment. Most enquiries here are for individual family homes and small
                 roadside commercial buildings, where the design has to make sense for the plot, the budget and
                 the way the building will actually be used. We measure the site in person, work up the drawings

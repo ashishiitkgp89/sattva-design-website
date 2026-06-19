@@ -25,6 +25,7 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/projects" className="text-gray-900 hover:text-gray-600 transition-colors">Projects</Link>
+            <Link href="/services" className="text-gray-900 hover:text-gray-600 transition-colors">Services</Link>
             <Link href="/service-areas" className="text-gray-900 hover:text-gray-600 transition-colors">Service Areas</Link>
             <Link href="/blog" className="text-gray-900 hover:text-gray-600 transition-colors">Blog</Link>
             <Link href="/about" className="text-gray-900 hover:text-gray-600 transition-colors">About</Link>
@@ -48,6 +49,7 @@ export default function Navbar() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link href="/projects" className="block px-3 py-2 text-gray-900 hover:text-gray-600 transition-colors">Projects</Link>
+            <Link href="/services" className="block px-3 py-2 text-gray-900 hover:text-gray-600 transition-colors">Services</Link>
             <Link href="/service-areas" className="block px-3 py-2 text-gray-900 hover:text-gray-600 transition-colors">Service Areas</Link>
             <Link href="/blog" className="block px-3 py-2 text-gray-900 hover:text-gray-600 transition-colors">Blog</Link>
             <Link href="/about" className="block px-3 py-2 text-gray-900 hover:text-gray-600 transition-colors">About</Link>

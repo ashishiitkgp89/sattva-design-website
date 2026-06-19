@@ -113,6 +113,10 @@ export default function ServiceAreaPage({
     area.mapQuery
   )}&output=embed`;
 
+  // Link services to the location-matched variant (Ranchi areas → -ranchi pages,
+  // Palamu areas → -daltonganj-medininagar pages).
+  const svcLocKey = area.office === 'ranchi' ? 'ranchi' : 'daltonganj-medininagar';
+
   // Nearby areas: other places in the same group (Ranchi localities / Palamu / cities).
   const nearby = newServiceAreas
     .filter(
@@ -187,7 +191,7 @@ export default function ServiceAreaPage({
                     <li key={item.name}>
                       {item.slug ? (
                         <Link
-                          href={`/services/${item.slug}`}
+                          href={`/services/${item.slug}-${svcLocKey}`}
                           className="text-gray-600 hover:text-gray-900 transition-colors"
                         >
                           {item.name}

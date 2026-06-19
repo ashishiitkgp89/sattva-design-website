@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Architecture & Interior Design in Garhwa | Sattva Design',
     description:
-      "Architecture, interior design and building-approval services for Garhwa town and district, delivered from Sattva Design's Medininagar head office. Custom homes, commercial spaces and naksha pass support.",
+      "Architecture, interior design and building-approval services for Garhwa town and district, delivered from Sattva Design's Medininagar office. Custom homes, commercial spaces and naksha pass support.",
     url: 'https://sattvadesignconsultancy.com/service-areas/garhwa',
   },
 };
@@ -26,7 +26,7 @@ export default function Garhwa() {
     "@type": "ArchitecturalFirm",
     "name": "Sattva Design - Garhwa",
     "image": "https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png",
-    "description": "Architecture and interior design firm serving Garhwa town and district, working from Sattva Design's Medininagar head office.",
+    "description": "Architecture and interior design firm serving Garhwa town and district, working from Sattva Design's Medininagar office.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Shop no-14, 1st Floor Zila Parishad Market Kutchery, Railway crossing Road, Jail Hata Rd",
@@ -52,7 +52,7 @@ export default function Garhwa() {
   const faqs = [
     {
       q: "Does Sattva Design work in Garhwa even though the office is in Medininagar?",
-      a: "Yes. Garhwa is the headquarters of its own district in western Jharkhand and is well within our working area. We serve it from our Medininagar head office, scheduling site visits to take measurements and meet clients, then carrying out the design and drawing work from our studio.",
+      a: "Yes. Garhwa is the headquarters of its own district in western Jharkhand and is well within our working area. We serve it from our Medininagar office, scheduling site visits to take measurements and meet clients, then carrying out the design and drawing work from our studio.",
     },
     {
       q: "What kinds of projects do you design in Garhwa?",
@@ -85,7 +85,7 @@ export default function Garhwa() {
                   Architecture & Interior Design in Garhwa
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  House plans, commercial buildings, interiors and approvals for Garhwa, served from our Medininagar head office
+                  House plans, commercial buildings, interiors and approvals for Garhwa, served from our Medininagar office
                 </p>
                 <a
                   href="#contact"
@@ -107,7 +107,7 @@ export default function Garhwa() {
                 Garhwa is the headquarters of Garhwa district in western Jharkhand, west of the Palamu
                 region where our office is based. Being a district town, it generates a wider mix of work
                 than the smaller blocks nearby, and people here look for plans that balance everyday
-                practicality with a budget. We take on that work from our Medininagar head office, planning
+                practicality with a budget. We take on that work from our Medininagar office, planning
                 site visits in advance so a single trip covers measurements, the brief and a proper look at
                 the plot before we begin drawing.
               </p>

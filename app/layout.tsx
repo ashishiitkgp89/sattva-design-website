@@ -64,19 +64,19 @@ const organizationSchema = {
     {
       '@type': 'PostalAddress',
       streetAddress:
-        'Shop no-14, 1st Floor Zila Parishad Market Kutchery, Railway crossing Road, Jail Hata Rd',
-      addressLocality: 'Medininagar',
+        '3rd Floor, Sunita Complex, Shivdayal Nagar, Argora, Bypass Rd, opposite V Mart, Harmu Housing Colony, Harmu',
+      addressLocality: 'Ranchi',
       addressRegion: 'Jharkhand',
-      postalCode: '822101',
+      postalCode: '834002',
       addressCountry: 'IN',
     },
     {
       '@type': 'PostalAddress',
       streetAddress:
-        '3rd Floor, Sunita Complex, Shivdayal Nagar, Argora, Bypass Rd, opposite V Mart, Harmu Housing Colony, Harmu',
-      addressLocality: 'Ranchi',
+        'Shop no-14, 1st Floor Zila Parishad Market Kutchery, Railway crossing Road, Jail Hata Rd',
+      addressLocality: 'Medininagar',
       addressRegion: 'Jharkhand',
-      postalCode: '834002',
+      postalCode: '822101',
       addressCountry: 'IN',
     },
   ],

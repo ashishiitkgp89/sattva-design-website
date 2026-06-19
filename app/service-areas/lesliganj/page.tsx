@@ -58,7 +58,7 @@ export default function Lesliganj() {
   const faqs = [
     {
       q: 'Does Sattva Design work in Lesliganj?',
-      a: 'Yes. Lesliganj is within the Palamu district that we serve from our head office in Medininagar. We take on residential, commercial and interior projects here, with site visits arranged from the Medininagar studio.',
+      a: 'Yes. Lesliganj is within the Palamu district that we serve from our office in Medininagar. We take on residential, commercial and interior projects here, with site visits arranged from the Medininagar studio.',
     },
     {
       q: 'What services can I get for a project in Lesliganj?',
@@ -111,7 +111,7 @@ export default function Lesliganj() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-serif mb-6">Architecture & Design Services in Lesliganj</h2>
               <p className="text-gray-600 text-lg">
-                Lesliganj is a block town in the Palamu district, and we serve it from Sattva Design's head office in
+                Lesliganj is a block town in the Palamu district, and we serve it from Sattva Design's office in
                 nearby Medininagar. Many of the projects we are approached for here are individual houses on family plots,
                 shop and commercial fronts along the main road, and interiors for homes that are being extended or rebuilt.
                 Working from Medininagar means our team can reach Lesliganj sites easily for measurement, marking and

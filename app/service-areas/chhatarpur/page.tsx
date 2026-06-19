@@ -63,7 +63,7 @@ export default function Chhatarpur() {
   const faqs = [
     {
       q: 'Does Sattva Design work in Chhatarpur?',
-      a: 'Yes. Chhatarpur is part of the Palamu district we serve from Sattva Design\'s head office in Medininagar. We take on homes, commercial buildings and interior projects here, with site visits arranged from Medininagar.',
+      a: 'Yes. Chhatarpur is part of the Palamu district we serve from Sattva Design\'s office in Medininagar. We take on homes, commercial buildings and interior projects here, with site visits arranged from Medininagar.',
     },
     {
       q: 'What architecture and interior services do you provide for Chhatarpur?',
@@ -97,7 +97,7 @@ export default function Chhatarpur() {
                   Architecture & Interior Design in Chhatarpur
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-                  Homes, commercial spaces and interiors for Chhatarpur, served from our Medininagar head office
+                  Homes, commercial spaces and interiors for Chhatarpur, served from our Medininagar office
                 </p>
                 <a
                   href="#contact"
@@ -116,7 +116,7 @@ export default function Chhatarpur() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-serif mb-6">Architecture & Design Services in Chhatarpur</h2>
               <p className="text-gray-600 text-lg">
-                Chhatarpur is a block town in the Palamu district, and we serve it from Sattva Design's head office in
+                Chhatarpur is a block town in the Palamu district, and we serve it from Sattva Design's office in
                 Medininagar. The projects we are most often approached for here are individual houses on family plots,
                 shop and commercial fronts, and interiors for homes being extended or rebuilt. Because Medininagar is a
                 short drive away, our team can reach Chhatarpur sites for measurement, marking and supervision during

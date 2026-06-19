@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getBlogs, getProjects } from '@/utils/contentful';
 import { newServiceAreas } from '@/data/serviceAreas';
+import { getAllServiceSlugs } from '@/data/services';
 
 const BASE_URL = 'https://sattvadesignconsultancy.com';
 
@@ -21,34 +22,6 @@ const SERVICE_AREA_SLUGS = [
   'hussainabad-japla',
   'haidernagar',
   'nagar-utari',
-];
-
-const SERVICE_SLUGS = [
-  'custom-home-design-daltonganj-medininagar',
-  'luxury-villas-farmhouses-daltonganj-medininagar',
-  'sustainable-green-architecture-daltonganj-medininagar',
-  'commercial-architecture-daltonganj-medininagar',
-  'industrial-architecture-daltonganj-medininagar',
-  'urban-planning-daltonganj-medininagar',
-  'interior-design-daltonganj-medininagar',
-  'construction-management-daltonganj-medininagar',
-  'renovation-daltonganj-medininagar',
-  'building-approvals-daltonganj-medininagar',
-  'retail-stores-showrooms-daltonganj-medininagar',
-  'hotels-hospitality-design-daltonganj-medininagar',
-  'educational-institutions-daltonganj-medininagar',
-  'healthcare-hospitals-daltonganj-medininagar',
-  'landscape-architecture-daltonganj-medininagar',
-  'public-spaces-infrastructure-daltonganj-medininagar',
-  'designed-blueprints-daltonganj-medininagar',
-  'project-estimation-daltonganj-medininagar',
-  'commercial-interior-design-daltonganj-medininagar',
-  'custom-furniture-decor-daltonganj-medininagar',
-  'office-commercial-renovation-daltonganj-medininagar',
-  'retail-showroom-remodeling-daltonganj-medininagar',
-  '3d-visualization-rendering-daltonganj-medininagar',
-  'facade-exterior-design-daltonganj-medininagar',
-  'vastu-compliant-architecture-daltonganj-medininagar',
 ];
 
 // Hand-built static project pages (also covered by dynamic /projects/[slug]).
@@ -80,7 +53,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  const servicePages: MetadataRoute.Sitemap = SERVICE_SLUGS.map((slug) => ({
+  const servicePages: MetadataRoute.Sitemap = getAllServiceSlugs().map((slug) => ({
     url: `${BASE_URL}/services/${slug}`,
     lastModified: now,
     changeFrequency: 'monthly',

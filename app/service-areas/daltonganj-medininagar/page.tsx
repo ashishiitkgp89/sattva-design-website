@@ -54,7 +54,7 @@ export default function DaltonganjMedininagar() {
   const faqs = [
     {
       q: 'Does Sattva Design have an office in Daltonganj (Medininagar)?',
-      a: 'Yes. Daltonganj is part of Medininagar, where our head office is located on the 1st floor of Zila Parishad Market near the Railway crossing on Jail Hata Road. Clients here get our most hands-on service, including in-person consultations and regular site visits.',
+      a: 'Yes. Daltonganj is part of Medininagar, where our office is located on the 1st floor of Zila Parishad Market near the Railway crossing on Jail Hata Road. Clients here get our most hands-on service, including in-person consultations and regular site visits.',
     },
     {
       q: 'What architecture and interior services do you offer in Daltonganj (Medininagar)?',

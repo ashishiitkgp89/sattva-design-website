@@ -77,49 +77,49 @@ export const CORE_SERVICE_CATEGORIES: { title: string; items: ServiceItem[] }[] 
   {
     title: 'Residential Architecture',
     items: [
-      { name: 'Custom Home Design', slug: 'custom-home-design-daltonganj-medininagar' },
-      { name: 'Luxury Villas & Farmhouses', slug: 'luxury-villas-farmhouses-daltonganj-medininagar' },
-      { name: 'Sustainable & Green Architecture', slug: 'sustainable-green-architecture-daltonganj-medininagar' },
+      { name: 'Custom Home Design', slug: 'custom-home-design' },
+      { name: 'Luxury Villas & Farmhouses', slug: 'luxury-villas-farmhouses' },
+      { name: 'Sustainable & Green Architecture', slug: 'sustainable-green-architecture' },
     ],
   },
   {
     title: 'Commercial Architecture',
     items: [
-      { name: 'Commercial Buildings', slug: 'commercial-architecture-daltonganj-medininagar' },
-      { name: 'Retail Stores & Showrooms', slug: 'retail-stores-showrooms-daltonganj-medininagar' },
-      { name: 'Hotels & Hospitality Design', slug: 'hotels-hospitality-design-daltonganj-medininagar' },
+      { name: 'Commercial Buildings', slug: 'commercial-architecture' },
+      { name: 'Retail Stores & Showrooms', slug: 'retail-stores-showrooms' },
+      { name: 'Hotels & Hospitality Design', slug: 'hotels-hospitality-design' },
     ],
   },
   {
     title: 'Interior Design',
     items: [
-      { name: 'Residential Interiors', slug: 'interior-design-daltonganj-medininagar' },
-      { name: 'Commercial Interior Design', slug: 'commercial-interior-design-daltonganj-medininagar' },
-      { name: 'Custom Furniture & Décor', slug: 'custom-furniture-decor-daltonganj-medininagar' },
+      { name: 'Residential Interiors', slug: 'interior-design' },
+      { name: 'Commercial Interior Design', slug: 'commercial-interior-design' },
+      { name: 'Custom Furniture & Décor', slug: 'custom-furniture-decor' },
     ],
   },
   {
     title: 'Naksha Pass & Approvals',
     items: [
-      { name: 'Building Approvals', slug: 'building-approvals-daltonganj-medininagar' },
-      { name: 'Designed Blueprints', slug: 'designed-blueprints-daltonganj-medininagar' },
-      { name: 'Project Estimation', slug: 'project-estimation-daltonganj-medininagar' },
+      { name: 'Building Approvals', slug: 'building-approvals' },
+      { name: 'Designed Blueprints', slug: 'designed-blueprints' },
+      { name: 'Project Estimation', slug: 'project-estimation' },
     ],
   },
   {
     title: 'Civil Engineering & Construction',
     items: [
-      { name: 'Construction Management', slug: 'construction-management-daltonganj-medininagar' },
-      { name: 'Renovation & Remodeling', slug: 'renovation-daltonganj-medininagar' },
-      { name: 'Office & Commercial Renovation', slug: 'office-commercial-renovation-daltonganj-medininagar' },
+      { name: 'Construction Management', slug: 'construction-management' },
+      { name: 'Renovation & Remodeling', slug: 'renovation' },
+      { name: 'Office & Commercial Renovation', slug: 'office-commercial-renovation' },
     ],
   },
   {
     title: 'Specialized Services',
     items: [
-      { name: '3D Visualization & Rendering', slug: '3d-visualization-rendering-daltonganj-medininagar' },
-      { name: 'Facade & Exterior Design', slug: 'facade-exterior-design-daltonganj-medininagar' },
-      { name: 'Vastu-Compliant Architecture', slug: 'vastu-compliant-architecture-daltonganj-medininagar' },
+      { name: '3D Visualization & Rendering', slug: '3d-visualization-rendering' },
+      { name: 'Facade & Exterior Design', slug: 'facade-exterior-design' },
+      { name: 'Vastu-Compliant Architecture', slug: 'vastu-compliant-architecture' },
     ],
   },
 ];
