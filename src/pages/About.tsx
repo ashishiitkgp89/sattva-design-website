@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { offices } from '../utils/offices';
 
 const About = () => {
   return (
@@ -68,65 +69,63 @@ const About = () => {
 
         <div className="mb-16">
           <h2 className="text-2xl font-serif mb-6">Visit Us</h2>
+
+          <div className="flex items-start space-x-4 mb-8">
+            <Mail className="w-6 h-6 text-gray-400 mt-1" />
+            <div>
+              <h3 className="font-medium mb-2">Email</h3>
+              <p className="text-gray-600">
+                <a href="mailto:sattvadesignconsultancy@gmail.com" className="hover:text-gray-900 transition-colors">
+                  sattvadesignconsultancy@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 text-gray-400 mt-1" />
-                <div>
-                  <h3 className="font-medium mb-2">Our Location</h3>
+            {offices.map((office) => (
+              <div key={office.name} className="space-y-4">
+                <h3 className="text-xl font-medium">{office.name}</h3>
+                <div className="flex items-start space-x-4">
+                  <MapPin className="w-6 h-6 text-gray-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-600">
-                    Shop no-14, 1st Floor Zila Parishad Market Kutchery,<br />
-                    Railway crossing Road, Jail Hata Rd,<br />
-                    Medininagar, Jharkhand 822101
+                    {office.address.map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        {i < office.address.length - 1 && <br />}
+                      </React.Fragment>
+                    ))}
                   </p>
                 </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <Phone className="w-6 h-6 text-gray-400 mt-1" />
-                <div>
-                  <h3 className="font-medium mb-2">Phone</h3>
-                  <p className="text-gray-600">
-                    <a href="tel:+917209567678" className="hover:text-gray-900 transition-colors">
-                      +91 7209567678
-                    </a>
-                  </p>
+                <div className="flex items-start space-x-4">
+                  <Phone className="w-6 h-6 text-gray-400 mt-1 flex-shrink-0" />
+                  <a href={office.phoneHref} className="text-gray-600 hover:text-gray-900 transition-colors">
+                    {office.phone}
+                  </a>
+                </div>
+                <a
+                  href={office.directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-black hover:text-gray-600 transition-colors"
+                >
+                  Get Directions →
+                </a>
+                <div className="h-[300px]">
+                  <iframe
+                    title={`Map of Sattva Design ${office.name} office`}
+                    src={office.mapSrc}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg shadow-md"
+                  ></iframe>
                 </div>
               </div>
-
-              <div className="flex items-start space-x-4">
-                <Mail className="w-6 h-6 text-gray-400 mt-1" />
-                <div>
-                  <h3 className="font-medium mb-2">Email</h3>
-                  <p className="text-gray-600">
-                    <a href="mailto:sattvadesignconsultancy@gmail.com" className="hover:text-gray-900 transition-colors">
-                      sattvadesignconsultancy@gmail.com
-                    </a>
-                  </p>
-                </div>
-              </div>
-
-              <a
-                href="https://www.google.com/maps/place/Sattva+Design+Consultancy/@24.0410025,84.0672999,17z/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-black hover:text-gray-600 transition-colors"
-              >
-                Get Directions →
-              </a>
-            </div>
-            <div className="h-[300px]">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7673460244392!2d84.06729989999999!3d24.0410025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398c777187960e53%3A0x97413753729d2041!2sSattva%20Design%20Consultancy!5e0!3m2!1sen!2sin!4v1709052136037!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-lg shadow-md"
-              ></iframe>
-            </div>
+            ))}
           </div>
         </div>
       </div>

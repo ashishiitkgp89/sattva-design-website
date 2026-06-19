@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { offices } from '../utils/offices';
 
 const ContactSection = ({ isFullPage = false }) => {
   const [formData, setFormData] = useState({
@@ -93,17 +94,6 @@ const ContactSection = ({ isFullPage = false }) => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 text-gray-400 mt-1" />
-                <div>
-                  <h3 className="font-medium mb-1">Location</h3>
-                  <p className="text-gray-600">
-                    Shop no-14, 1st Floor Zila Parishad Market Kutchery,<br />
-                    Railway crossing Road, Jail Hata Rd,<br />
-                    Medininagar, Jharkhand 822101
-                  </p>
-                </div>
-              </div>
             </div>
 
             <div className="mt-12">
@@ -121,19 +111,6 @@ const ContactSection = ({ isFullPage = false }) => {
               </a>
             </div>
 
-            {/* Google Maps Embed */}
-            <div className="mt-12">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7673460244392!2d84.06729989999999!3d24.0410025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398c777187960e53%3A0x97413753729d2041!2sSattva%20Design%20Consultancy!5e0!3m2!1sen!2sin!4v1709052136037!5m2!1sen!2sin"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-lg shadow-md"
-              ></iframe>
-            </div>
           </div>
 
           {/* Contact Form */}
@@ -239,6 +216,54 @@ const ContactSection = ({ isFullPage = false }) => {
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
+          </div>
+        </div>
+
+        {/* Our Offices */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-serif mb-8">Our Offices</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {offices.map((office) => (
+              <div key={office.name}>
+                <h3 className="text-xl font-medium mb-4">{office.name}</h3>
+                <div className="flex items-start space-x-4 mb-4">
+                  <MapPin className="w-6 h-6 text-gray-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-600">
+                    {office.address.map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        {i < office.address.length - 1 && <br />}
+                      </React.Fragment>
+                    ))}
+                  </p>
+                </div>
+                <div className="flex items-start space-x-4 mb-4">
+                  <Phone className="w-6 h-6 text-gray-400 mt-1 flex-shrink-0" />
+                  <a href={office.phoneHref} className="text-gray-600 hover:text-gray-900 transition-colors">
+                    {office.phone}
+                  </a>
+                </div>
+                <a
+                  href={office.directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-black hover:text-gray-600 transition-colors mb-4"
+                >
+                  Get Directions →
+                </a>
+                <iframe
+                  title={`Map of Sattva Design ${office.name} office`}
+                  src={office.mapSrc}
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg shadow-md"
+                ></iframe>
+              </div>
+            ))}
           </div>
         </div>
       </div>
