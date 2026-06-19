@@ -1,11 +1,30 @@
 import { createClient } from 'contentful';
-import { EntryCollection } from 'contentful';
 import { Document } from '@contentful/rich-text-types';
 
-export const contentfulClient = createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID as string,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN as string,
-});
+// Server-only credentials (no NEXT_PUBLIC_ prefix) — Contentful is fetched
+// exclusively in Server Components / route handlers, so the token never ships
+// to the browser.
+const CONTENTFUL_SPACE_ID = process.env.CONTENTFUL_SPACE_ID;
+const CONTENTFUL_ACCESS_TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;
+
+// Lazily create the client only when credentials are present. If the env vars
+// are missing (e.g. not yet configured on the host), fall back to a stub that
+// returns empty result sets so the build/render degrades gracefully instead of
+// throwing "Expected parameter accessToken" at import time.
+export const contentfulClient: any =
+  CONTENTFUL_SPACE_ID && CONTENTFUL_ACCESS_TOKEN
+    ? createClient({
+        space: CONTENTFUL_SPACE_ID,
+        accessToken: CONTENTFUL_ACCESS_TOKEN,
+      })
+    : {
+        getEntries: async () => {
+          console.warn(
+            'Contentful env vars are not set (CONTENTFUL_SPACE_ID / CONTENTFUL_ACCESS_TOKEN) — returning empty content.'
+          );
+          return { items: [] };
+        },
+      };
 
 export interface GalleryItem {
   title: string;
@@ -204,7 +223,7 @@ export async function getProjects(): Promise<Project[]> {
 
         return project;
       })
-      .filter((project): project is Project => project !== null);
+      .filter((project: Project | null): project is Project => project !== null);
   } catch (error) {
     console.error('Error fetching projects:', error);
     throw error;
@@ -285,7 +304,7 @@ export async function getServices(): Promise<Service[]> {
 
         return service;
       })
-      .filter((service): service is Service => service !== null);
+      .filter((service: Service | null): service is Service => service !== null);
   } catch (error) {
     console.error('Error fetching services:', error);
     throw error;
@@ -354,7 +373,7 @@ export async function getServiceAreas(): Promise<ServiceArea[]> {
 
         return serviceArea;
       })
-      .filter((serviceArea): serviceArea is ServiceArea => serviceArea !== null);
+      .filter((serviceArea: ServiceArea | null): serviceArea is ServiceArea => serviceArea !== null);
   } catch (error) {
     console.error('Error fetching service areas:', error);
     throw error;

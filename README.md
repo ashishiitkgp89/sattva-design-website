@@ -22,16 +22,16 @@ Other scripts: `npm run build` (production build), `npm start` (serve the build)
 
 ## Environment variables
 
-All are `NEXT_PUBLIC_*` (read in the browser and at build time). Set them in `.env` locally and in the Vercel project settings:
+Set them in `.env` locally and in the Vercel project settings. Contentful is fetched server-side only, so its credentials are **server-only** (no `NEXT_PUBLIC_` prefix, not exposed to the browser). The Cloudinary and EmailJS values are used in client components, so they stay `NEXT_PUBLIC_*`.
 
-| Variable | Purpose |
-|----------|---------|
-| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name |
-| `NEXT_PUBLIC_CONTENTFUL_SPACE_ID` | Contentful space |
-| `NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN` | Contentful delivery token |
-| `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` | EmailJS public key |
-| `NEXT_PUBLIC_EMAILJS_SERVICE_ID` | EmailJS service id |
-| `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` | EmailJS template id |
+| Variable | Scope | Purpose |
+|----------|-------|---------|
+| `CONTENTFUL_SPACE_ID` | server | Contentful space |
+| `CONTENTFUL_ACCESS_TOKEN` | server | Contentful delivery token |
+| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` | client | Cloudinary cloud name |
+| `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` | client | EmailJS public key |
+| `NEXT_PUBLIC_EMAILJS_SERVICE_ID` | client | EmailJS service id |
+| `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` | client | EmailJS template id |
 
 ## Deployment (Vercel)
 
