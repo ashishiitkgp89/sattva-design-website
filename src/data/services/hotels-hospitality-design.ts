@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const hotelsHospitalityDesign: ServiceEntry = {
   slug: 'hotels-hospitality-design',
+  heroImage: "https://images.pexels.com/photos/26729563/pexels-photo-26729563.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Hotels & Hospitality Design',
   category: 'Commercial Architecture',
   tagline: 'Hotels, resorts and restaurants designed to delight guests and run profitably',

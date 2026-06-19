@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const healthcareHospitals: ServiceEntry = {
   slug: 'healthcare-hospitals',
+  heroImage: "https://images.pexels.com/photos/668300/pexels-photo-668300.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Healthcare & Hospitals',
   category: 'Industrial & Institutional',
   tagline: 'Hospitals and clinics planned around patient care, hygiene and efficient workflows',

@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const constructionManagement: ServiceEntry = {
   slug: 'construction-management',
+  heroImage: "https://images.pexels.com/photos/6082416/pexels-photo-6082416.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Construction Management',
   category: 'Civil Engineering & Construction',
   tagline: 'One accountable team managing quality, cost and timeline on site',

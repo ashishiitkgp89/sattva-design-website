@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const interiorDesign: ServiceEntry = {
   slug: 'interior-design',
+  heroImage: "https://images.pexels.com/photos/29012619/pexels-photo-29012619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Interior Design',
   category: 'Interior Design',
   tagline: 'Functional, beautiful interiors designed around how you live and work',

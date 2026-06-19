@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const customFurnitureDecor: ServiceEntry = {
   slug: 'custom-furniture-decor',
+  heroImage: "https://images.pexels.com/photos/7573934/pexels-photo-7573934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Custom Furniture & Décor',
   category: 'Interior Design',
   tagline: 'Furniture and styling made to fit your space, your storage and your taste',

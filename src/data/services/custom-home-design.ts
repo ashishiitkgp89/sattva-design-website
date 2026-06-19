@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const customHomeDesign: ServiceEntry = {
   slug: 'custom-home-design',
+  heroImage: "https://images.pexels.com/photos/30580640/pexels-photo-30580640.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Custom Home Design',
   category: 'Residential Architecture',
   tagline: 'A home designed around your plot, your family and the way you want to live',

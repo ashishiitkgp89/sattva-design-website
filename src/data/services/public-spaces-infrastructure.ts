@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const publicSpacesInfrastructure: ServiceEntry = {
   slug: "public-spaces-infrastructure",
+  heroImage: "https://images.pexels.com/photos/35130101/pexels-photo-35130101.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: "Public Spaces & Infrastructure",
   category: "Urban & Landscape Planning",
   tagline: "Designing parks, plazas and civic spaces that communities actually use",

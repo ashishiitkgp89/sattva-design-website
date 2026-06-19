@@ -8,6 +8,7 @@ import { newServiceAreas, getServiceArea } from '@/data/serviceAreas';
 import {
   CORE_SERVICE_CATEGORIES,
   OFFICE_SCHEMA,
+  AREA_HERO_IMAGE,
   ServiceAreaEntry,
 } from '@/data/serviceArea.types';
 
@@ -146,7 +147,7 @@ export default function ServiceAreaPage({
         {/* Hero */}
         <div className="relative h-[40vh] bg-gray-100">
           <Image
-            src="https://res.cloudinary.com/dhakknfrx/image/upload/v1739525293/image_he11ay.png"
+            src={AREA_HERO_IMAGE[area.type]}
             alt={`Sattva Design — architecture & interior design in ${fullName}`}
             fill
             priority

@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const retailStoresShowrooms: ServiceEntry = {
   slug: "retail-stores-showrooms",
+  heroImage: "https://images.pexels.com/photos/4280705/pexels-photo-4280705.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: "Retail Stores & Showrooms",
   category: "Commercial Architecture",
   tagline: "Retail spaces that pull customers in and keep them moving toward the sale",

@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const projectEstimation: ServiceEntry = {
   slug: "project-estimation",
+  heroImage: "https://images.pexels.com/photos/8470057/pexels-photo-8470057.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: "Project Estimation",
   category: "Naksha Pass & Approvals",
   tagline: "Know what your project will really cost before you build",

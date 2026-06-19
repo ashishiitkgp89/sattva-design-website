@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const officeCommercialRenovation: ServiceEntry = {
   slug: "office-commercial-renovation",
+  heroImage: "https://images.pexels.com/photos/7028110/pexels-photo-7028110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: "Office & Commercial Renovation",
   category: "Civil Engineering & Construction",
   tagline: "Upgrade your workplace with minimal downtime and maximum impact",

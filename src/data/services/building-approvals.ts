@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const buildingApprovals: ServiceEntry = {
   slug: 'building-approvals',
+  heroImage: "https://images.pexels.com/photos/4458205/pexels-photo-4458205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Building Approvals',
   category: 'Naksha Pass & Approvals',
   tagline: 'Get your building plan sanctioned correctly, the first time',

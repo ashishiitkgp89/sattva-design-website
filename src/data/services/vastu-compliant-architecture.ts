@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const vastuCompliantArchitecture: ServiceEntry = {
   slug: "vastu-compliant-architecture",
+  heroImage: "https://images.pexels.com/photos/7148779/pexels-photo-7148779.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: "Vastu-Compliant Architecture",
   category: "Specialized Services",
   tagline: "Designs that honour Vastu principles without compromising modern living",

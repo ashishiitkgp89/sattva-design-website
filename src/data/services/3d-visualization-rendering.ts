@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const threeDVisualizationRendering: ServiceEntry = {
   slug: '3d-visualization-rendering',
+  heroImage: "https://images.pexels.com/photos/1816030/pexels-photo-1816030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: '3D Visualization & Rendering',
   category: 'Specialized Services',
   tagline: 'See your project in photorealistic detail before a single brick is laid',

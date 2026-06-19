@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const facadeExteriorDesign: ServiceEntry = {
   slug: 'facade-exterior-design',
+  heroImage: "https://images.pexels.com/photos/15663487/pexels-photo-15663487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Facade & Exterior Design',
   category: 'Specialized Services',
   tagline: 'A striking, weather-smart exterior that gives your building real presence',

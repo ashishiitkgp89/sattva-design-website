@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const sustainableGreenArchitecture: ServiceEntry = {
   slug: "sustainable-green-architecture",
+  heroImage: "https://images.pexels.com/photos/13111771/pexels-photo-13111771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: "Sustainable & Green Architecture",
   category: "Residential Architecture",
   tagline: "Homes that work with the climate to cut energy use and live more comfortably",

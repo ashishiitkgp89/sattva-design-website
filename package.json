@@ -22,13 +22,17 @@
     "@mui/material-nextjs": "^6.4.3",
     "contentful": "^10.6.25",
     "date-fns": "^4.1.0",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.344.0",
     "next": "^14.2.18",
+    "next-mdx-remote": "^5.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-feather": "^2.0.10"
+    "react-feather": "^2.0.10",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^20.14.0",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",

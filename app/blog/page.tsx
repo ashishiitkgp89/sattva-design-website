@@ -2,35 +2,73 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { format } from 'date-fns';
 import { getBlogs, BlogPost } from '@/utils/contentful';
+import { getAllMdxPosts } from '@/lib/mdxPosts';
 
 export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    "Explore architectural insights, design trends, and industry news from Sattva Design's blog.",
+    "Architectural insights, cost guides and design trends from Sattva Design — practical advice for building and designing in Ranchi and across Jharkhand.",
   keywords: [
     'architecture blog',
-    'design blog',
-    'architectural insights',
+    'home construction Jharkhand',
+    'interior design ideas Ranchi',
     'Sattva Design',
   ],
   alternates: { canonical: '/blog' },
   openGraph: {
     title: 'Blog',
     description:
-      "Architectural insights, design trends, and industry news from Sattva Design.",
+      'Architectural insights, cost guides and design trends from Sattva Design.',
     url: '/blog',
   },
 };
 
+interface PostCard {
+  slug: string;
+  title: string;
+  excerpt?: string;
+  date?: string;
+  image?: string;
+  tags?: string[];
+}
+
 export default async function Blogs() {
-  let blogs: BlogPost[] = [];
+  // In-repo MDX posts.
+  const mdxCards: PostCard[] = getAllMdxPosts().map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    excerpt: p.excerpt,
+    date: p.date,
+    image: p.coverImage,
+    tags: p.tags,
+  }));
+
+  // Contentful posts (kept so existing posts continue to work).
+  let cfCards: PostCard[] = [];
   try {
-    blogs = await getBlogs();
+    const cf = await getBlogs();
+    const mdxSlugs = new Set(mdxCards.map((c) => c.slug));
+    cfCards = cf
+      .filter((b: BlogPost) => !mdxSlugs.has(b.slug))
+      .map((b: BlogPost) => ({
+        slug: b.slug,
+        title: b.title,
+        excerpt: b.excerpt,
+        date: b.publishDate,
+        image: b.featuredImage?.fields?.file?.url
+          ? `https:${b.featuredImage.fields.file.url}`
+          : undefined,
+        tags: b.tags,
+      }));
   } catch (err) {
-    console.error('Error fetching blogs:', err);
+    console.error('Error fetching Contentful blogs:', err);
   }
+
+  const posts = [...mdxCards, ...cfCards].sort((a, b) =>
+    (a.date || '') < (b.date || '') ? 1 : -1
+  );
 
   return (
     <div className="min-h-screen bg-white pt-24">
@@ -38,17 +76,17 @@ export default async function Blogs() {
         <h1 className="text-4xl font-serif mb-12">Blog</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogs.map((blog) => (
+          {posts.map((post) => (
             <Link
-              key={blog.slug}
-              href={`/blog/${blog.slug}`}
+              key={post.slug}
+              href={`/blog/${post.slug}`}
               className="group cursor-pointer"
             >
               <div className="relative overflow-hidden rounded-lg mb-4">
-                {blog.featuredImage?.fields?.file?.url ? (
+                {post.image ? (
                   <img
-                    src={`https:${blog.featuredImage.fields.file.url}`}
-                    alt={blog.title}
+                    src={post.image}
+                    alt={post.title}
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 ) : (
@@ -59,20 +97,20 @@ export default async function Blogs() {
               </div>
 
               <div className="space-y-2">
-                {blog.publishDate && (
+                {post.date && (
                   <time className="text-sm text-gray-500">
-                    {format(new Date(blog.publishDate), 'MMMM d, yyyy')}
+                    {format(new Date(post.date), 'MMMM d, yyyy')}
                   </time>
                 )}
                 <h2 className="text-xl font-serif group-hover:text-gray-600 transition-colors">
-                  {blog.title}
+                  {post.title}
                 </h2>
-                {blog.excerpt && (
-                  <p className="text-gray-600 line-clamp-2">{blog.excerpt}</p>
+                {post.excerpt && (
+                  <p className="text-gray-600 line-clamp-2">{post.excerpt}</p>
                 )}
-                {blog.tags && blog.tags.length > 0 && (
+                {post.tags && post.tags.length > 0 && (
                   <div className="flex flex-wrap gap-2">
-                    {blog.tags.map((tag) => (
+                    {post.tags.map((tag) => (
                       <span
                         key={tag}
                         className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"

@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const industrialArchitecture: ServiceEntry = {
   slug: 'industrial-architecture',
+  heroImage: "https://images.pexels.com/photos/4115457/pexels-photo-4115457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Industrial Architecture',
   category: 'Industrial & Institutional',
   tagline: 'Factories, warehouses and industrial buildings planned for productivity and safety',

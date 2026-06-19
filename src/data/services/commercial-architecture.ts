@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const commercialArchitecture: ServiceEntry = {
   slug: 'commercial-architecture',
+  heroImage: "https://images.pexels.com/photos/934350/pexels-photo-934350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Commercial Architecture',
   category: 'Commercial Architecture',
   tagline: 'Buildings that work commercially — for customers, staff and your bottom line',

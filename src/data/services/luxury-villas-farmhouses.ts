@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const luxuryVillasFarmhouses: ServiceEntry = {
   slug: 'luxury-villas-farmhouses',
+  heroImage: "https://images.pexels.com/photos/37692742/pexels-photo-37692742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Luxury Villas & Farmhouses',
   category: 'Residential Architecture',
   tagline: 'Bespoke villas and farmhouses designed for comfort, privacy and a sense of escape',

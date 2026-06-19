@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const landscapeArchitecture: ServiceEntry = {
   slug: 'landscape-architecture',
+  heroImage: "https://images.pexels.com/photos/29821815/pexels-photo-29821815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Landscape Architecture',
   category: 'Urban & Landscape Planning',
   tagline: 'Gardens, courtyards and outdoor spaces designed to be lived in and easy to maintain',

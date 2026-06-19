@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const educationalInstitutions: ServiceEntry = {
   slug: 'educational-institutions',
+  heroImage: "https://images.pexels.com/photos/29229169/pexels-photo-29229169.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Educational Institutions',
   category: 'Industrial & Institutional',
   tagline: 'Safe, functional campuses designed for learning, movement and growth',

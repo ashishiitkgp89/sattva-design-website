@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const designedBlueprints: ServiceEntry = {
   slug: 'designed-blueprints',
+  heroImage: "https://images.pexels.com/photos/6615086/pexels-photo-6615086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: 'Designed Blueprints',
   category: 'Naksha Pass & Approvals',
   tagline: 'Accurate, sanction-ready building drawings prepared to local norms',

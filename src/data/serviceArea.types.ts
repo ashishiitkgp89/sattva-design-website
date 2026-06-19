@@ -31,6 +31,14 @@ export interface ServiceAreaEntry {
   faqs: AreaFaq[];
 }
 
+// Hero images for service-area pages, chosen by area type.
+export const AREA_HERO_IMAGE: Record<'locality' | 'city', string> = {
+  locality:
+    'https://images.pexels.com/photos/7672060/pexels-photo-7672060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  city:
+    'https://images.pexels.com/photos/11505497/pexels-photo-11505497.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+};
+
 // Structured office data for JSON-LD (kept here so pages can build
 // schema.org PostalAddress without reshaping src/utils/offices.ts).
 export interface OfficeSchema {

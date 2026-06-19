@@ -2,6 +2,7 @@ import { ServiceEntry } from '../services.types';
 
 export const urbanPlanning: ServiceEntry = {
   slug: "urban-planning",
+  heroImage: "https://images.pexels.com/photos/33803470/pexels-photo-33803470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   name: "Urban Planning",
   category: "Urban & Landscape Planning",
   tagline: "Layouts for neighbourhoods, townships and developments that work for the long term",
