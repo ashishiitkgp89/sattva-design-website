@@ -3,8 +3,8 @@ import { EntryCollection } from 'contentful';
 import { Document } from '@contentful/rich-text-types';
 
 export const contentfulClient = createClient({
-  space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
-  accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN,
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID as string,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN as string,
 });
 
 export interface GalleryItem {
@@ -159,7 +159,7 @@ export async function getProjects(): Promise<Project[]> {
     const response = await contentfulClient.getEntries({
       content_type: 'projects',
       order: ['fields.order']
-    });
+    } as any);
 
     console.log('Contentful response:', response); // Debug log
 
@@ -215,7 +215,7 @@ export async function getProject(slug: string): Promise<Project | null> {
   const response = await contentfulClient.getEntries({
     content_type: 'projects',
     'fields.slug': slug,
-  });
+  } as any);
 
   if (!response.items.length) {
     return null;
@@ -255,7 +255,7 @@ export async function getServices(): Promise<Service[]> {
     const response = await contentfulClient.getEntries({
       content_type: 'service',
       order: ['fields.order']
-    });
+    } as any);
 
     if (!response.items) {
       console.error('No items in response:', response);
@@ -297,7 +297,7 @@ export async function getService(slug: string): Promise<Service | null> {
     const response = await contentfulClient.getEntries({
       content_type: 'service',
       'fields.slug': slug,
-    });
+    } as any);
 
     if (!response.items.length) {
       return null;
@@ -327,7 +327,7 @@ export async function getServiceAreas(): Promise<ServiceArea[]> {
   try {
     const response = await contentfulClient.getEntries({
       content_type: 'serviceArea',
-    });
+    } as any);
 
     if (!response.items) {
       console.error('No items in response:', response);
@@ -366,7 +366,7 @@ export async function getServiceArea(slug: string): Promise<ServiceArea | null> 
     const response = await contentfulClient.getEntries({
       content_type: 'serviceArea',
       'fields.slug': slug,
-    });
+    } as any);
 
     if (!response.items.length) {
       return null;
@@ -391,12 +391,12 @@ export async function getServiceArea(slug: string): Promise<ServiceArea | null> 
 
 export async function getBlogs(): Promise<BlogPost[]> {
   try {
-    const response = await contentfulClient.getEntries<BlogPostEntry>({
+    const response = await contentfulClient.getEntries({
       content_type: 'blogPost',
-      order: '-fields.publishDate',
-    });
+      order: ['-fields.publishDate'],
+    } as any);
 
-    return response.items.map(item => item.fields);
+    return response.items.map((item: any) => item.fields as BlogPost);
   } catch (error) {
     console.error('Error fetching blogs:', error);
     throw error;
@@ -405,17 +405,17 @@ export async function getBlogs(): Promise<BlogPost[]> {
 
 export async function getBlog(slug: string): Promise<BlogPost | null> {
   try {
-    const response = await contentfulClient.getEntries<BlogPostEntry>({
+    const response = await contentfulClient.getEntries({
       content_type: 'blogPost',
       'fields.slug': slug,
       limit: 1,
-    });
+    } as any);
 
     if (response.items.length === 0) {
       return null;
     }
 
-    return response.items[0].fields;
+    return response.items[0].fields as unknown as BlogPost;
   } catch (error) {
     console.error('Error fetching blog:', error);
     throw error;

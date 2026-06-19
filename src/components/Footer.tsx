@@ -1,26 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Instagram } from 'lucide-react';
+import { ranchiLocalities, otherCities, palamuAreas } from '../data/serviceAreas';
+
+function AreaList({ areas }: { areas: { name: string; slug: string }[] }) {
+  return (
+    <ul className="space-y-2">
+      {areas.map((area) => (
+        <li key={area.slug}>
+          <Link
+            href={`/service-areas/${area.slug}`}
+            className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
+          >
+            {area.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function Footer() {
-  const serviceAreas = [
-    { name: 'Daltonganj (Medininagar)', slug: 'daltonganj-medininagar' },
-    { name: 'Lesliganj', slug: 'lesliganj' },
-    { name: 'Chainpur', slug: 'chainpur' },
-    { name: 'Nawa Bazar', slug: 'nawa-bazar' },
-    { name: 'Chhatarpur', slug: 'chhatarpur' },
-    { name: 'Hariharganj', slug: 'hariharganj' },
-    { name: 'Satbarwa', slug: 'satbarwa' },
-    { name: 'Garhwa', slug: 'garhwa' },
-    { name: 'Ranka', slug: 'ranka' },
-    { name: 'Bhawnathpur', slug: 'bhawnathpur' },
-    { name: 'Latehar', slug: 'latehar' },
-    { name: 'Balumath', slug: 'balumath' },
-    { name: 'Herhanj', slug: 'herhanj' },
-    { name: 'Hussainabad (Japla)', slug: 'hussainabad-japla' },
-    { name: 'Haidernagar', slug: 'haidernagar' },
-    { name: 'Nagar Utari', slug: 'nagar-utari' }
-  ];
+  const ranchi = ranchiLocalities.map((a) => ({ name: a.name, slug: a.slug }));
+  const cities = otherCities.map((a) => ({ name: a.name, slug: a.slug }));
 
   return (
     <footer className="border-t border-gray-100">
@@ -28,7 +30,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Social */}
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <img
                 src="https://res.cloudinary.com/dhakknfrx/image/upload/v1740713460/Sattva_Logo_zzviza.png"
                 alt="Sattva Design Logo"
@@ -37,10 +39,10 @@ export default function Footer() {
               <span className="text-lg font-serif">Sattva Design</span>
             </Link>
             <div className="mt-4">
-              <a 
-                href="https://www.instagram.com/sattva_design_/?igsh=MWY0bGRkamxudDUxeg%3D%3D#" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://www.instagram.com/sattva_design_/?igsh=MWY0bGRkamxudDUxeg%3D%3D#"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 transition-colors"
               >
                 <Instagram size={20} />
@@ -48,56 +50,42 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Service Areas - Column 1 */}
+          {/* Palamu region */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Service Areas</h3>
-            <ul className="space-y-2">
-              {serviceAreas.slice(0, 5).map((area) => (
-                <li key={area.slug}>
-                  <Link 
-                    to={`/service-areas/${area.slug}`}
-                    className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
-                  >
-                    {area.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <Link
+              href="/service-areas"
+              className="block text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4 hover:text-gray-600 transition-colors"
+            >
+              Palamu Region
+            </Link>
+            <AreaList areas={palamuAreas} />
           </div>
 
-          {/* Service Areas - Column 2 */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">&nbsp;</h3>
-            <ul className="space-y-2">
-              {serviceAreas.slice(5, 10).map((area) => (
-                <li key={area.slug}>
-                  <Link 
-                    to={`/service-areas/${area.slug}`}
-                    className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
-                  >
-                    {area.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Ranchi localities */}
+          {ranchi.length > 0 && (
+            <div>
+              <Link
+                href="/service-areas"
+                className="block text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4 hover:text-gray-600 transition-colors"
+              >
+                Ranchi
+              </Link>
+              <AreaList areas={ranchi} />
+            </div>
+          )}
 
-          {/* Service Areas - Column 3 */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">&nbsp;</h3>
-            <ul className="space-y-2">
-              {serviceAreas.slice(10).map((area) => (
-                <li key={area.slug}>
-                  <Link 
-                    to={`/service-areas/${area.slug}`}
-                    className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
-                  >
-                    {area.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Other Jharkhand cities */}
+          {cities.length > 0 && (
+            <div>
+              <Link
+                href="/service-areas"
+                className="block text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4 hover:text-gray-600 transition-colors"
+              >
+                Jharkhand Cities
+              </Link>
+              <AreaList areas={cities} />
+            </div>
+          )}
         </div>
 
         <div className="mt-8 text-center text-sm text-gray-500">
@@ -106,4 +94,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-} 
+}

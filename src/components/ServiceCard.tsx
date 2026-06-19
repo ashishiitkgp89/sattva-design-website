@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Service } from '../utils/contentful';
 
 interface ServiceCardProps {
@@ -9,7 +9,7 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   return (
     <Link
-      to={`/services/${service.slug}`}
+      href={`/services/${service.slug}`}
       className="group block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
     >
       {service.featuredImage?.fields?.file?.url ? (

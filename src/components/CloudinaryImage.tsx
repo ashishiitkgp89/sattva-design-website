@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { AdvancedImage, placeholder, responsive } from '@cloudinary/react';
 import { cld } from '../utils/cloudinary';
